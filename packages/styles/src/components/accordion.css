@@ -1,0 +1,48 @@
+.accordion {
+  @apply bg-card text-card-foreground flex w-full max-w-md flex-col justify-center;
+}
+
+.accordion__trigger {
+  @apply flex w-full items-center justify-between border-b p-3;
+
+  @apply transition-colors motion-reduce:transition-none;
+
+  &:hover {
+    @apply bg-primary/10;
+  }
+
+  &:focus {
+    @apply outline-none;
+  }
+}
+
+.accordion__title {
+  @apply text-left font-medium;
+}
+
+.accordion__trigger-icon {
+  @apply text-muted-foreground size-5;
+
+  @apply transition-transform duration-300 motion-reduce:transition-none;
+
+  [data-panel-open] > & {
+    @apply rotate-180;
+  }
+}
+
+.accordion__panel {
+  height: var(--accordion-panel-height);
+
+  @apply overflow-hidden;
+
+  @apply transition-[height] motion-reduce:transition-none;
+
+  &[data-ending-style],
+  &[data-starting-style] {
+    @apply h-0;
+  }
+}
+
+.accordion__content {
+  @apply p-4;
+}

@@ -1,0 +1,100 @@
+---
+title: Styling
+description: Understanding how styling works in Fea UI
+---
+
+Fea UI takes a unique approach to styling by separating component logic from visual styles. Instead of cluttering your JSX with utility classes, we use a combination of **Tailwind Variants** for logic and **CSS** with Tailwind's `@apply` for visuals.
+
+## The Philosophy
+
+1. **Components** handle structure and state.
+2. **Variants** map props to semantic class names.
+3. **CSS** applies the visual rules using Tailwind utilities.
+
+This separation ensures that your components remain readable and your styles remain maintainable.
+
+## How it works
+
+### 1. Component Definition
+
+Components use `tailwind-variants` to generate class names based on props, but **not** to apply utility classes directly.
+
+```tsx
+// button.variants.ts
+import { tv } from "tailwind-variants";
+
+export const buttonVariants = tv({
+  base: "button",
+  variants: {
+    variant: {
+      primary: "button--primary",
+      secondary: "button--secondary",
+    },
+    size: {
+      sm: "button--sm",
+      md: "button--md",
+      lg: "button--lg",
+    },
+  },
+  defaultVariants: {
+    variant: "primary",
+    size: "md",
+  },
+});
+```
+
+### 2. CSS Implementation
+
+The actual styles are defined in CSS files, often using Tailwind's `@apply` directive.
+
+```css
+/* button.css */
+.button {
+  @apply inline-flex items-center justify-center rounded-md font-medium transition-colors;
+}
+
+.button--primary {
+  @apply bg-primary text-primary-foreground hover:bg-primary/90;
+}
+
+.button--secondary {
+  @apply bg-secondary text-secondary-foreground hover:bg-secondary/80;
+}
+
+.button--sm {
+  @apply h-9 px-3 text-xs;
+}
+```
+
+## Customization
+
+### Overriding Styles
+
+Since classes are semantic, you can easily override them in your own CSS.
+
+```css
+/* Your custom CSS */
+.button--primary {
+  @apply bg-blue-600 hover:bg-blue-700;
+}
+```
+
+### Using `className`
+
+You can still pass utility classes via the `className` prop for one-off adjustments.
+
+```tsx
+<Button className="mt-4 w-full" />
+```
+
+## Theming
+
+Fea UI uses CSS variables for theming, making it compatible with standard Tailwind configuration.
+
+```css
+:root {
+  --primary: 222.2 47.4% 11.2%;
+  --primary-foreground: 210 40% 98%;
+  /* ... */
+}
+```

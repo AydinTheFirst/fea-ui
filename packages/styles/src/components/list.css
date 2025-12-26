@@ -1,0 +1,8 @@
+/** Base Styling */
+.list {
+  @apply flex flex-col gap-1;
+}
+
+.list__item {
+  @apply cursor-pointer;
+}

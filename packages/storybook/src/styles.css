@@ -1,0 +1,4 @@
+@import "tailwindcss";
+@import "@fea-ui/styles";
+
+@custom-variant dark (&: is(.dark *));

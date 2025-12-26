@@ -1,0 +1,29 @@
+/** Base Styling */
+.link {
+  @apply text-link underline-offset-2 transition-colors;
+
+  &:visited {
+    @apply text-link/70;
+  }
+
+  &:hover {
+    @apply text-link/80;
+  }
+
+  &[data-active] {
+    @apply font-semibold;
+  }
+
+  &:disabled,
+  [data-disabled] {
+    @apply text-muted cursor-not-allowed;
+  }
+}
+
+.link--underline {
+  @apply underline;
+}
+
+.link--no-underline {
+  @apply no-underline;
+}

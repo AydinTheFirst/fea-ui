@@ -1,0 +1,49 @@
+---
+title: Introduction
+description: A lightweight, accessible React component library built on top of [Base UI](https://base-ui.com/)
+---
+
+**Fea UI** is a lightweight UI utility library built around a simple rule:
+
+**components describe structure and behavior — styling is defined elsewhere.**
+
+Instead of writing Tailwind utility classes directly in JSX, Fea UI maps component props to **semantic, BEM-based class names**, while all visual styles are composed inside CSS files using Tailwind’s `@apply`.
+This keeps components clean, predictable, and easy to reason about as a codebase grows.
+
+---
+
+### A minimal example
+
+**Component**
+
+```tsx
+<BaseButton className={buttonVariants({ variant: "primary", size: "sm" })} />
+```
+
+**Generated class names**
+
+```html
+<button class="button button--primary button--sm" />
+```
+
+**CSS**
+
+```css
+.button--primary {
+  @apply bg-primary text-primary-foreground;
+}
+```
+
+That’s it.
+
+- No inline utilities
+- No conditional class logic
+- No styling inside JSX
+
+---
+
+## Philosophy
+
+> **Styles belong to styles. Logic belongs to components.**
+
+This principle defines how Fea UI is designed and how it should be used.

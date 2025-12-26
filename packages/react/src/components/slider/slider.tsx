@@ -1,0 +1,74 @@
+import { Slider as BaseSlider } from "@base-ui/react";
+import { useMemo } from "react";
+import { cn } from "tailwind-variants";
+import { SliderContext } from "./slider.context";
+import { type SliderVariants, sliderVariants } from "./slider.variants";
+import { useSlider } from "./use-slider";
+
+// Root
+interface SliderProps extends SliderVariants, BaseSlider.Root.Props {}
+
+const Slider = ({ className, ...props }: SliderProps) => {
+	const slots = useMemo(() => sliderVariants(), []);
+	return (
+		<SliderContext value={{ slots }}>
+			<BaseSlider.Root className={cn(className, slots.root())} {...props} />
+		</SliderContext>
+	);
+};
+
+// Value
+const SliderValue = ({ className, ...props }: BaseSlider.Value.Props) => {
+	const { slots } = useSlider();
+	return (
+		<BaseSlider.Value className={cn(className, slots.value())} {...props} />
+	);
+};
+
+// Control
+const SliderControl = ({ className, ...props }: BaseSlider.Control.Props) => {
+	const { slots } = useSlider();
+	return (
+		<BaseSlider.Control className={cn(className, slots.control())} {...props} />
+	);
+};
+
+// Track
+const SliderTrack = ({ className, ...props }: BaseSlider.Track.Props) => {
+	const { slots } = useSlider();
+	return (
+		<BaseSlider.Track className={cn(className, slots.track())} {...props} />
+	);
+};
+
+// Indicator
+const SliderIndicator = ({
+	className,
+	...props
+}: BaseSlider.Indicator.Props) => {
+	const { slots } = useSlider();
+	return (
+		<BaseSlider.Indicator
+			className={cn(className, slots.indicator())}
+			{...props}
+		/>
+	);
+};
+
+// Thumb
+const SliderThumb = ({ className, ...props }: BaseSlider.Thumb.Props) => {
+	const { slots } = useSlider();
+	return (
+		<BaseSlider.Thumb className={cn(className, slots.thumb())} {...props} />
+	);
+};
+
+// Assign subcomponents
+Slider.Value = SliderValue;
+Slider.Control = SliderControl;
+Slider.Track = SliderTrack;
+Slider.Indicator = SliderIndicator;
+Slider.Thumb = SliderThumb;
+Slider.Root = Slider;
+
+export default Slider;

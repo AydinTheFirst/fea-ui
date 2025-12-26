@@ -1,0 +1,37 @@
+/** Base Styling */
+.input {
+  @apply bg-input text-input-foreground rounded border;
+  @apply w-full px-3 py-2;
+
+  @apply transition-all motion-reduce:transition-none;
+
+  @media (hover: hover) {
+    &:hover:not([data-disabled]) {
+      @apply brightness-90;
+    }
+  }
+
+  &:disabled {
+    @apply status-disabled;
+  }
+
+  &:valid {
+    @apply status-valid;
+  }
+
+  &:invalid:not(:placeholder-shown) {
+    @apply status-invalid;
+  }
+}
+
+.input--sm {
+  @apply h-8 text-sm;
+}
+
+.input--md {
+  @apply h-10;
+}
+
+.input--lg {
+  @apply h-12;
+}
