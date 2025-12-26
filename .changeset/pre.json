@@ -6,6 +6,7 @@
     "@fea-ui/styles": "0.1.0"
   },
   "changesets": [
+    "flat-beers-laugh",
     "flat-suits-learn",
     "short-olives-pay",
     "twenty-sheep-grin"
