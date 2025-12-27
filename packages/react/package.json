@@ -37,6 +37,7 @@
     "postadd:component": "bun run gen:exports",
     "build": "tsdown",
     "dev": "tsdown --watch",
+    "format": "prettier --write .",
     "gen:exports": "bun scripts/generate-exports.mjs",
     "postgen:exports": "bun lint",
     "lint": "biome check --write",

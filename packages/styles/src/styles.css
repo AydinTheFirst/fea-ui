@@ -1,5 +1,4 @@
 @import "tailwindcss";
-
 @import "./components/index.css" layer(components);
 
 :root {
@@ -96,16 +95,6 @@
   --color-link: var(--link);
 }
 
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-
-  body {
-    @apply bg-background text-foreground;
-  }
-}
-
 @utility status-focused {
   @apply ring-offset-background ring-2 ring-offset-2 outline-none;
 }
@@ -124,4 +113,10 @@
 
 @utility status-invalid {
   @apply border-danger;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
 }

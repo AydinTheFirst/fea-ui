@@ -1,4 +1,4 @@
 /** Base Styling */
 .label {
-	@apply flex items-center gap-2 select-none;
+  @apply flex items-center gap-2 select-none;
 }

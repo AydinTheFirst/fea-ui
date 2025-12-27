@@ -16,6 +16,8 @@
       "dependsOn": ["^start"],
       "persistent": true,
       "cache": false
-    }
+    },
+    "format": {},
+    "lint": {}
   }
 }

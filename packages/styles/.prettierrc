@@ -1,1 +1,17 @@
-{ "plugins": ["prettier-plugin-tailwindcss", "prettier-plugin-packagejson"] }
+{
+  "plugins": ["prettier-plugin-tailwindcss", "prettier-plugin-packagejson"],
+  "overrides": [
+    {
+      "files": ["*.css"],
+      "options": {
+        "parser": "css"
+      }
+    },
+    {
+      "files": ["package.json"],
+      "options": {
+        "parser": "json"
+      }
+    }
+  ]
+}
