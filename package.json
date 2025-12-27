@@ -30,8 +30,7 @@
   "scripts": {
     "build": "turbo build --filter=!examples/**",
     "dev": "turbo dev --filter=!examples/**",
-    "format": "turbo format",
-    "lint": "turbo lint",
+    "check": "turbo check",
     "prepare": "husky",
     "prepublish": "bun run build",
     "publish": "bun changeset --patch && bun changeset version && bun changeset publish",
@@ -44,8 +43,6 @@
     "@commitlint/cli": "^20.2.0",
     "@commitlint/config-conventional": "^20.2.0",
     "husky": "^9.1.7",
-    "prettier": "^3.7.4",
-    "prettier-plugin-packagejson": "^2.5.20",
     "turbo": "^2.7.1"
   },
   "packageManager": "bun@1.3.4",

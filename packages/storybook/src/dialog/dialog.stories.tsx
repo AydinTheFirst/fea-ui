@@ -25,7 +25,7 @@ export const Default: Story = {
 						This is the description of the dialog.
 					</Dialog.Description>
 
-					<Form className="my-4 " onSubmit={(e) => e.preventDefault()}>
+					<Form className="my-4" onSubmit={(e) => e.preventDefault()}>
 						<Field.Root>
 							<Field.Label>Username</Field.Label>
 							<Field.Control />

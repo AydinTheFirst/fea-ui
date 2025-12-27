@@ -15,8 +15,8 @@ export default function Page() {
 				</div>
 				<div className="col-span-12 my-4" />
 				<div className="col-span-12 md:col-span-6">
-					<div className="flex flex-col justify-center h-full">
-						<h4 className="text-xl font-semibold mb-4">First Content</h4>
+					<div className="flex h-full flex-col justify-center">
+						<h4 className="mb-4 text-xl font-semibold">First Content</h4>
 						<p className="text-lg">
 							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo
 							dignissimos doloribus, fugiat tempore quod consequatur rerum est
@@ -28,20 +28,20 @@ export default function Page() {
 				<div className="col-span-12 md:col-span-6">
 					<img
 						alt="About Illustration"
-						className="w-full rounded h-96"
+						className="h-96 w-full rounded"
 						src="/undraw_about-us.svg"
 					/>
 				</div>
 				<div className="col-span-12 md:col-span-6">
 					<img
 						alt="Team Illustration"
-						className="w-full rounded h-96"
+						className="h-96 w-full rounded"
 						src="/undraw_portfolio.svg"
 					/>
 				</div>
 				<div className="col-span-12 md:col-span-6">
-					<div className="flex flex-col justify-center h-full">
-						<h4 className="text-xl font-semibold mb-4">Second Content</h4>
+					<div className="flex h-full flex-col justify-center">
+						<h4 className="mb-4 text-xl font-semibold">Second Content</h4>
 						<p className="text-lg">
 							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis,
 							minima ratione. Corporis suscipit, aspernatur illum quidem,
@@ -51,8 +51,8 @@ export default function Page() {
 					</div>
 				</div>
 				<div className="col-span-12 md:col-span-6">
-					<div className="flex flex-col justify-center h-full">
-						<h4 className="text-xl font-semibold mb-4">Third Content</h4>
+					<div className="flex h-full flex-col justify-center">
+						<h4 className="mb-4 text-xl font-semibold">Third Content</h4>
 						<p className="text-lg">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
 							maiores, laboriosam magnam cumque corporis reiciendis consectetur.
@@ -64,7 +64,7 @@ export default function Page() {
 				<div className="col-span-12 md:col-span-6">
 					<img
 						alt="Mission Illustration"
-						className="w-full rounded h-96"
+						className="h-96 w-full rounded"
 						src="/undraw_team.svg"
 					/>
 				</div>

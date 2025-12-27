@@ -1,76 +1,76 @@
 /** Base Styling */
 .button {
-  @apply cursor-pointer;
+	@apply cursor-pointer;
 
-  @apply inline-flex items-center justify-center gap-2 rounded border font-medium text-nowrap;
+	@apply inline-flex items-center justify-center gap-2 rounded border font-medium text-nowrap;
 
-  @apply w-fit px-4 py-4;
+	@apply w-fit px-4 py-4;
 
-  @apply transition-all motion-reduce:transition-none;
+	@apply transition-all motion-reduce:transition-none;
 
-  @media (hover: hover) {
-    &:hover:not([data-disabled]) {
-      @apply brightness-90;
-    }
-  }
+	@media (hover: hover) {
+		&:hover:not([data-disabled]) {
+			@apply brightness-90;
+		}
+	}
 
-  &:active {
-    @apply scale-95;
-  }
+	&:active {
+		@apply scale-95;
+	}
 
-  &:focus-visible {
-    @apply status-focused;
-  }
+	&:focus-visible {
+		@apply status-focused;
+	}
 
-  &[data-disabled] {
-    @apply status-disabled;
-  }
+	&[data-disabled] {
+		@apply status-disabled;
+	}
 
-  svg {
-    @apply size-5 shrink-0;
-  }
+	svg {
+		@apply size-5 shrink-0;
+	}
 }
 
 .button--sm {
-  @apply h-8 text-sm;
+	@apply h-8 text-sm;
 }
 
 .button--md {
-  @apply h-10;
+	@apply h-10;
 }
 
 .button--lg {
-  @apply h-12;
+	@apply h-12;
 }
 
 .button--primary {
-  @apply bg-primary text-primary-foreground;
+	@apply bg-primary text-primary-foreground;
 }
 
 .button--secondary {
-  @apply bg-secondary text-secondary-foreground;
+	@apply bg-secondary text-secondary-foreground;
 }
 
 .button--outline {
-  @apply bg-background text-foreground;
+	@apply bg-background text-foreground;
 }
 
 .button--danger {
-  @apply bg-danger text-danger-foreground;
+	@apply bg-danger text-danger-foreground;
 }
 
 .button--ghost {
-  @apply hover:bg-primary/10 border-0 bg-transparent;
+	@apply hover:bg-primary/10 border-0 bg-transparent;
 }
 
 .button--icon-only {
-  @apply size-10;
+	@apply size-10;
 }
 
 .button--icon-only.button--sm {
-  @apply size-8;
+	@apply size-8;
 }
 
 .button--icon-only.button--lg {
-  @apply size-12;
+	@apply size-12;
 }

@@ -60,11 +60,11 @@ export default function Contact() {
 						</Card.Body>
 					</Card>
 				</div>
-				<div className="col-span-12 md:col-span-6 hidden md:block">
-					<div className="grid place-items-center h-full">
+				<div className="col-span-12 hidden md:col-span-6 md:block">
+					<div className="grid h-full place-items-center">
 						<img
 							alt="Contact Illustration"
-							className="w-full rounded max-w-md"
+							className="w-full max-w-md rounded"
 							src="/contact-illustration.svg"
 						/>
 					</div>

@@ -1,12 +1,12 @@
 /** Base Styling */
 .field {
-  @apply flex flex-col gap-1;
+	@apply flex flex-col gap-1;
 }
 
 .field__description {
-  @apply text-muted-foreground text-sm;
+	@apply text-muted-foreground text-sm;
 }
 
 .field__error {
-  @apply text-danger text-sm;
+	@apply text-danger text-sm;
 }

@@ -7,15 +7,15 @@ export default function HelloWorld() {
 	return (
 		<Container className="my-10">
 			<div className="grid grid-cols-1 md:grid-cols-2">
-				<div className="flex flex-col gap-4 justify-center">
+				<div className="flex flex-col justify-center gap-4">
 					<h1 className="text-4xl font-bold">PACES</h1>
-					<p className="max-w-xl text-lg text-muted-foreground">
+					<p className="text-muted-foreground max-w-xl text-lg">
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est
 						dolorem sit ad aliquam! Iste, hic quibusdam debitis maiores ad quod
 						dolore et nostrum exercitationem error fugit voluptate earum fuga
 						laudantium!
 					</p>
-					<div className="flex  gap-2">
+					<div className="flex gap-2">
 						<Button size="lg" variant="primary">
 							<Icon icon="mdi:rocket-launch" />
 							Explore

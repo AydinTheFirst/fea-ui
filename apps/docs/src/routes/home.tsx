@@ -19,9 +19,9 @@ export function meta() {
 export default function Home() {
   return (
     <HomeLayout {...baseOptions()}>
-      <div className="p-4 gap-4 flex flex-col items-center justify-center text-center flex-1">
+      <div className="flex flex-1 flex-col items-center justify-center gap-4 p-4 text-center">
         <Chip>v1.0.0-beta.1</Chip>
-        <h1 className="text-7xl font-bold mb-2">FeaUI</h1>
+        <h1 className="mb-2 text-7xl font-bold">FeaUI</h1>
         <p className="text-fd-muted-foreground mb-4">
           A lightweight, accessible React component library built on top of{" "}
           <a href="https://base-ui.com/" className="text-fd-primary underline">

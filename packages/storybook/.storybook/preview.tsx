@@ -14,7 +14,7 @@ const preview: Preview = {
 		}),
 		(Story) => {
 			return (
-				<div className="isolate min-h-screen bg-background text-foreground flex items-center justify-center">
+				<div className="bg-background text-foreground isolate flex min-h-screen items-center justify-center">
 					<Story />
 				</div>
 			);

@@ -14,7 +14,7 @@ const communityLinks = [
 export default function Footer() {
   return (
     <footer className="bg-secondary/30 text-secondary-foreground">
-      <div className="container mx-auto py-10 px-4">
+      <div className="container mx-auto px-4 py-10">
         <div className="grid grid-cols-12 gap-4">
           <div className="col-span-12 md:col-span-6">
             <div className="flex flex-col gap-4">
@@ -26,7 +26,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="col-span-12 md:col-span-3">
-            <h4 className="text-md font-semibold mb-2">Docs</h4>
+            <h4 className="text-md mb-2 font-semibold">Docs</h4>
             <List>
               {docsLinks.map((link) => (
                 <List.Item key={link.href}>
@@ -38,7 +38,7 @@ export default function Footer() {
             </List>
           </div>
           <div className="col-span-12 md:col-span-3">
-            <h4 className="text-md font-semibold mb-2">Community</h4>
+            <h4 className="text-md mb-2 font-semibold">Community</h4>
             <List>
               {communityLinks.map((link) => (
                 <List.Item key={link.href}>
@@ -56,11 +56,11 @@ export default function Footer() {
           </div>
           <Separator className="col-span-12" />
           <div className="col-span-12">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-              <p className="text-sm text-fd-muted-foreground">
+            <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
+              <p className="text-fd-muted-foreground text-sm">
                 © {new Date().getFullYear()} FeaUI. All rights reserved.
               </p>
-              <p className="text-sm text-fd-muted-foreground text-right">
+              <p className="text-fd-muted-foreground text-right text-sm">
                 Built by{" "}
                 <Link
                   to="https://aydinthefirst.com"

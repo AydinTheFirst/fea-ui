@@ -2,121 +2,121 @@
 @import "./components/index.css" layer(components);
 
 :root {
-  --navbar-height: 4rem;
-  --radius: 0.625rem;
+	--navbar-height: 4rem;
+	--radius: 0.625rem;
 
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+	--background: oklch(1 0 0);
+	--foreground: oklch(0.145 0 0);
 
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --input: oklch(0.922 0 0);
-  --input-foreground: oklch(0.205 0 0);
-  --accordion: oklch(1 0 0);
-  --accordion-foreground: oklch(0.145 0 0);
+	--card: oklch(1 0 0);
+	--card-foreground: oklch(0.145 0 0);
+	--popover: oklch(1 0 0);
+	--popover-foreground: oklch(0.145 0 0);
+	--input: oklch(0.922 0 0);
+	--input-foreground: oklch(0.205 0 0);
+	--accordion: oklch(1 0 0);
+	--accordion-foreground: oklch(0.145 0 0);
 
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --danger: oklch(0.577 0.245 27.325);
-  --danger-foreground: oklch(0.985 0 0);
-  --success: oklch(0.623 0.17 145);
-  --success-foreground: oklch(0.985 0 0);
+	--primary: oklch(0.205 0 0);
+	--primary-foreground: oklch(0.985 0 0);
+	--secondary: oklch(0.97 0 0);
+	--secondary-foreground: oklch(0.205 0 0);
+	--muted: oklch(0.97 0 0);
+	--muted-foreground: oklch(0.556 0 0);
+	--accent: oklch(0.97 0 0);
+	--accent-foreground: oklch(0.205 0 0);
+	--danger: oklch(0.577 0.245 27.325);
+	--danger-foreground: oklch(0.985 0 0);
+	--success: oklch(0.623 0.17 145);
+	--success-foreground: oklch(0.985 0 0);
 
-  --border: oklch(0.922 0 0);
-  --ring: oklch(62% 0.18 250);
-  --link: oklch(0.205 0 0);
+	--border: oklch(0.922 0 0);
+	--ring: oklch(62% 0.18 250);
+	--link: oklch(0.205 0 0);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
+	--background: oklch(0.145 0 0);
+	--foreground: oklch(0.985 0 0);
 
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --input: oklch(1 0 0 / 15%);
-  --input-foreground: oklch(0.985 0 0);
-  --accordion: oklch(0.205 0 0);
-  --accordion-foreground: oklch(0.985 0 0);
+	--card: oklch(0.205 0 0);
+	--card-foreground: oklch(0.985 0 0);
+	--popover: oklch(0.205 0 0);
+	--popover-foreground: oklch(0.985 0 0);
+	--input: oklch(1 0 0 / 15%);
+	--input-foreground: oklch(0.985 0 0);
+	--accordion: oklch(0.205 0 0);
+	--accordion-foreground: oklch(0.985 0 0);
 
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --danger: oklch(0.704 0.191 22.216);
-  --danger-foreground: oklch(0.985 0 0);
-  --success: oklch(0.7017 0.3225 145);
-  --success-foreground: oklch(0.205 0 0);
+	--primary: oklch(0.922 0 0);
+	--primary-foreground: oklch(0.205 0 0);
+	--secondary: oklch(0.269 0 0);
+	--secondary-foreground: oklch(0.985 0 0);
+	--muted: oklch(0.269 0 0);
+	--muted-foreground: oklch(0.708 0 0);
+	--danger: oklch(0.704 0.191 22.216);
+	--danger-foreground: oklch(0.985 0 0);
+	--success: oklch(0.7017 0.3225 145);
+	--success-foreground: oklch(0.205 0 0);
 
-  --border: oklch(1 0 0 / 10%);
-  --ring: oklch(62% 0.18 250);
-  --link: oklch(0.922 0 0);
+	--border: oklch(1 0 0 / 10%);
+	--ring: oklch(62% 0.18 250);
+	--link: oklch(0.922 0 0);
 }
 
 @theme inline {
-  --radius: var(--radius);
+	--radius: var(--radius);
 
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
 
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-input: var(--input);
-  --color-input-foreground: var(--input-foreground);
-  --color-accordion: var(--accordion);
-  --color-accordion-foreground: var(--accordion-foreground);
+	--color-card: var(--card);
+	--color-card-foreground: var(--card-foreground);
+	--color-popover: var(--popover);
+	--color-popover-foreground: var(--popover-foreground);
+	--color-input: var(--input);
+	--color-input-foreground: var(--input-foreground);
+	--color-accordion: var(--accordion);
+	--color-accordion-foreground: var(--accordion-foreground);
 
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-danger: var(--danger);
-  --color-danger-foreground: var(--danger-foreground);
-  --color-success: var(--success);
-  --color-success-foreground: var(--success-foreground);
+	--color-primary: var(--primary);
+	--color-primary-foreground: var(--primary-foreground);
+	--color-secondary: var(--secondary);
+	--color-secondary-foreground: var(--secondary-foreground);
+	--color-muted: var(--muted);
+	--color-muted-foreground: var(--muted-foreground);
+	--color-danger: var(--danger);
+	--color-danger-foreground: var(--danger-foreground);
+	--color-success: var(--success);
+	--color-success-foreground: var(--success-foreground);
 
-  --color-border: var(--border);
-  --color-ring: var(--ring);
-  --color-link: var(--link);
+	--color-border: var(--border);
+	--color-ring: var(--ring);
+	--color-link: var(--link);
 }
 
 @utility status-focused {
-  @apply ring-offset-background ring-2 ring-offset-2 outline-none;
+	@apply ring-offset-background ring-2 ring-offset-2 outline-none;
 }
 
 @utility status-disabled {
-  @apply cursor-not-allowed opacity-50;
+	@apply cursor-not-allowed opacity-50;
 }
 
 @utility status-pending {
-  @apply cursor-wait opacity-75;
+	@apply cursor-wait opacity-75;
 }
 
 @utility status-valid {
-  @apply border-success;
+	@apply border-success;
 }
 
 @utility status-invalid {
-  @apply border-danger;
+	@apply border-danger;
 }
 
 @layer base {
-  body {
-    @apply bg-background text-foreground;
-  }
+	body {
+		@apply bg-background text-foreground;
+	}
 }

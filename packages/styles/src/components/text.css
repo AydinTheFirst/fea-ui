@@ -1,4 +1,4 @@
 /** Base Styling */
 .text {
-  @apply text-danger;
+	@apply text-danger;
 }

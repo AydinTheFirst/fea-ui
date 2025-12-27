@@ -33,7 +33,7 @@ function RowScroller({
 			{row.map((img) => (
 				<img
 					alt="I"
-					className="w-75 h-50 object-cover rounded-xl shrink-0"
+					className="h-50 w-75 shrink-0 rounded-xl object-cover"
 					key={img}
 					src={img}
 				/>
@@ -62,7 +62,7 @@ export function StickyScrollCarousel({
 			style={{ height: `${heightMultiplier * 100}vh` }}
 			{...props}
 		>
-			<div className="sticky top-0 h-screen flex flex-col justify-center gap-12 overflow-hidden">
+			<div className="sticky top-0 flex h-screen flex-col justify-center gap-12 overflow-hidden">
 				{images.map((row, rowIndex) => (
 					<RowScroller
 						key={row.join("|") || String(rowIndex)}

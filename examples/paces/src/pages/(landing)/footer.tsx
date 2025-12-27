@@ -41,8 +41,8 @@ export default function Footer() {
 		<footer className="bg-secondary text-secondary-foreground border-t">
 			<div className="container mx-auto px-10 py-16">
 				<div className="grid grid-cols-12 gap-4">
-					<div className="col-span-12 md:col-span-6 max-w-md  ">
-						<h2 className="text-3xl font-extrabold mb-2">PACES</h2>
+					<div className="col-span-12 max-w-md md:col-span-6">
+						<h2 className="mb-2 text-3xl font-extrabold">PACES</h2>
 						<p className="text-muted-foreground">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
 							magni, natus quod libero cum minus illo, molestias omnis
@@ -51,7 +51,7 @@ export default function Footer() {
 						</p>
 					</div>
 					<div className="col-span-12 md:col-span-2">
-						<h2 className="text-lg font-bold mb-2">Sitemap</h2>
+						<h2 className="mb-2 text-lg font-bold">Sitemap</h2>
 						<List>
 							{sitemap.map((item) => (
 								<List.Item key={item.name}>
@@ -61,7 +61,7 @@ export default function Footer() {
 						</List>
 					</div>
 					<div className="col-span-12 md:col-span-2">
-						<h2 className="text-lg font-bold mb-2">External Links</h2>
+						<h2 className="mb-2 text-lg font-bold">External Links</h2>
 						<List>
 							<List.Item>
 								<Link
@@ -84,7 +84,7 @@ export default function Footer() {
 						</List>
 					</div>
 					<div className="col-span-12 md:col-span-2">
-						<h2 className="text-lg font-bold mb-2">Resources</h2>
+						<h2 className="mb-2 text-lg font-bold">Resources</h2>
 						<List>
 							<List.Item>
 								<Link
@@ -108,7 +108,7 @@ export default function Footer() {
 					</div>
 					<Separator className="col-span-12" />
 					<div className="col-span-12">
-						<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+						<div className="grid grid-cols-1 gap-4 md:grid-cols-2">
 							<p className="text-muted-foreground text-sm">
 								&copy; {new Date().getFullYear()} PACES. All rights reserved.
 							</p>
