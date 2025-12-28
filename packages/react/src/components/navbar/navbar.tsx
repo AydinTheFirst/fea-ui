@@ -1,6 +1,8 @@
 import { LucideMenu, LucideX } from "lucide-react";
 import { useCallback, useMemo, useState } from "react";
 import { cn } from "tailwind-variants";
+import { Drawer } from "../drawer";
+import { Separator } from "../separator";
 import { NavbarContext } from "./navbar.context";
 import { type NavbarVariants, navbarVariants } from "./navbar.variants";
 import { useNavbar } from "./use-navbar";
@@ -89,17 +91,27 @@ const NavbarToggle = ({ className, ...props }: NavbarToggleProps) => {
 };
 
 // Menu
-interface NavbarMenuProps extends React.ComponentProps<"ul"> {}
+interface NavbarMenuProps extends React.ComponentProps<"ul"> {
+	header: React.ReactNode;
+}
 
-const NavbarMenu = ({ className, ...props }: NavbarMenuProps) => {
-	const { slots, isOpen } = useNavbar();
+const NavbarMenu = ({ className, header, ...props }: NavbarMenuProps) => {
+	const { slots, isOpen, onOpenChange } = useNavbar();
 
 	return (
-		<ul
-			className={cn(slots.menu(), className)}
-			data-expanded={isOpen ? "true" : "false"}
-			{...props}
-		/>
+		<Drawer onOpenChange={onOpenChange} open={isOpen}>
+			<Drawer.Portal>
+				<Drawer.Backdrop />
+				<Drawer.Viewport>
+					<Drawer.Popup>
+						{header}
+						<Drawer.Close />
+						<Separator />
+						<ul className={cn(slots.menu(), className)} {...props} />
+					</Drawer.Popup>
+				</Drawer.Viewport>
+			</Drawer.Portal>
+		</Drawer>
 	);
 };
 

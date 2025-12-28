@@ -40,7 +40,7 @@ export const Default: Story = {
 					</Button>
 				</Navbar.Content>
 			</Navbar.Container>
-			<Navbar.Menu>
+			<Navbar.Menu header="Navbar Content">
 				<Navbar.MenuItem>
 					<Link href="#">Home</Link>
 				</Navbar.MenuItem>

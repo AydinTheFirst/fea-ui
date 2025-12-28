@@ -28,7 +28,7 @@
 .drawer__close {
 	@apply cursor-pointer;
 
-	@apply absolute top-3 end-3 rounded-full p-1;
+	@apply absolute top-0 end-0 m-3 rounded-full;
 
 	@apply text-muted-foreground;
 
