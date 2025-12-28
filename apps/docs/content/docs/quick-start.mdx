@@ -18,9 +18,17 @@ Install FeaUI and its peer dependencies via npm or yarn:
 
 ## Import styles
 
+Styling is optional. You can style FeaUI components yourself, or use the default styles provided.
+
+```package-install
+@fea-ui/styles
+```
+
+In your main CSS file, import Tailwind and FeaUI styles:
+
 ```css
 @import "tailwindcss";
-@import "@fea-ui/react"; /* FeaUI styles */
+@import "@fea-ui/styles"; /* FeaUI styles */
 ```
 
 ## Use Components
