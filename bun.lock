@@ -82,7 +82,7 @@
     },
     "packages/react": {
       "name": "@fea-ui/react",
-      "version": "0.1.0-alpha.4",
+      "version": "0.1.0-alpha.7",
       "dependencies": {
         "@base-ui/react": "^1.0.0",
         "lucide-react": "^0.562.0",
@@ -133,7 +133,7 @@
     },
     "packages/styles": {
       "name": "@fea-ui/styles",
-      "version": "0.1.0-alpha.4",
+      "version": "0.1.0-alpha.7",
       "dependencies": {
         "tailwindcss": "^4.1.18",
       },
@@ -143,18 +143,6 @@
       },
       "peerDependencies": {
         "tailwindcss": ">=4.0.0",
-      },
-    },
-    "packages/test": {
-      "name": "test",
-      "dependencies": {
-        "tailwindcss": "^4.1.18",
-      },
-      "devDependencies": {
-        "@types/bun": "latest",
-      },
-      "peerDependencies": {
-        "typescript": "^5",
       },
     },
   },
@@ -1784,8 +1772,6 @@
     "tapable": ["tapable@2.3.0", "", {}, "sha512-g9ljZiwki/LfxmQADO3dEY1CbpmXT5Hm2fJ+QaGKwSXUylMybePR7/67YW7jOrrvjEgL1Fmz5kzyAjWVWLlucg=="],
 
     "term-size": ["term-size@2.2.1", "", {}, "sha512-wK0Ri4fOGjv/XPy8SBHZChl8CM7uMc5VML7SqiQ0zG7+J5Vr+RMQDoHa2CNT6KHUnTGIXH34UDMkPzAUyapBZg=="],
-
-    "test": ["test@workspace:packages/test"],
 
     "text-extensions": ["text-extensions@2.4.0", "", {}, "sha512-te/NtwBwfiNRLf9Ijqx3T0nlqZiQ2XrrtBvu+cLL8ZRrGkO0NHTug8MYFKyoSrv/sHTaSKfilUkizV6XhxMJ3g=="],
 

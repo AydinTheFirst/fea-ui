@@ -9,6 +9,7 @@ export function baseOptions(): BaseLayoutProps {
     links: [
       { text: "Docs", url: "/docs" },
       { text: "Components", url: "/docs/components/button" },
+      { text: "Roadmap", url: "/roadmap", icon: "rocket" },
     ],
   };
 }

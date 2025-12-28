@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Button Group",
+    "status": "completed",
+    "description": "A component for grouping buttons together."
+  },
+  {
+    "name": "Card",
+    "status": "completed",
+    "description": "A component for displaying content in a card layout."
+  },
+  {
+    "name": "Drawer",
+    "status": "completed",
+    "description": "A component for displaying a sliding panel."
+  },
+  {
+    "name": "Chip",
+    "status": "completed",
+    "description": "A component for displaying small blocks of information."
+  },
+  {
+    "name": "Container",
+    "status": "completed",
+    "description": "A component for constraining content width. `mx-auto` and `padding` is included by default."
+  },
+  {
+    "name": "Icon Button",
+    "status": "completed",
+    "description": "A button component that only contains an icon. Extended version of the Button component. Also Button component can be used with `isIconOnly` prop."
+  },
+  {
+    "name": "List",
+    "status": "completed",
+    "description": "A component for displaying a list of items."
+  },
+  {
+    "name": "Navbar",
+    "status": "completed",
+    "description": "Responsive navigation bar component."
+  },
+  {
+    "name": "Table",
+    "status": "completed",
+    "description": "A component for displaying tabular data."
+  },
+  {
+    "name": "Textarea",
+    "status": "completed",
+    "description": "A multi-line text input component."
+  }
+]

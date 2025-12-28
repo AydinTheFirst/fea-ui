@@ -1,1 +1,32 @@
 /** Base Styling */
+.table {
+	@apply w-full border-collapse bg-card;
+}
+
+.table__thead {
+	@apply bg-secondary text-secondary-foreground;
+}
+
+.table__th {
+	@apply border-border px-4 py-2 text-left font-medium;
+}
+
+.table__tbody {
+	@apply divide-y divide-border;
+}
+
+.table__tr {
+	@apply cursor-pointer;
+
+	&:hover {
+		@apply bg-secondary/50;
+	}
+}
+
+.table__td {
+	@apply border-border px-4 py-2;
+}
+
+.table__caption {
+	@apply mt-2 text-sm text-secondary-foreground;
+}

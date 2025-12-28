@@ -20,7 +20,7 @@ export const Default: Story = {
 					<Navbar.Toggle />
 					Navbar Content
 				</Navbar.Content>
-				<Navbar.Content className="justify-center">
+				<Navbar.Content className="hidden justify-center md:flex">
 					<Navbar.List>
 						<Navbar.ListItem>
 							<Link href="#">Home</Link>

@@ -20,7 +20,7 @@
 }
 
 .navbar__list {
-	@apply hidden md:flex md:items-center md:gap-6;
+	@apply flex items-center gap-4;
 }
 
 .navbar__list-item {
