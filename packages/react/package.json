@@ -1,6 +1,6 @@
 {
   "name": "@fea-ui/react",
-  "version": "1.0.0-alpha.5",
+  "version": "0.1.0-alpha.6",
   "description": "FeaUI React - A lightweight, accessible React component library built on top of Base UI",
   "keywords": [
     "fea-ui",

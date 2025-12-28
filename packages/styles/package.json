@@ -1,6 +1,6 @@
 {
   "name": "@fea-ui/styles",
-  "version": "1.0.0-alpha.5",
+  "version": "0.1.0-alpha.6",
   "description": "FeaUI Styles - Tailwind CSS styles for FeaUI components",
   "keywords": [
     "fea-ui",
