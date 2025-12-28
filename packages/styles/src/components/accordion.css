@@ -26,7 +26,7 @@
 	@apply transition-transform duration-300 motion-reduce:transition-none;
 
 	[data-panel-open] > & {
-		@apply bg-seconda rotate-180;
+		@apply bg-secondary rotate-180;
 	}
 }
 
