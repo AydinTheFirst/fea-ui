@@ -38,11 +38,11 @@ const sitemap = [
 
 export default function Footer() {
 	return (
-		<footer className="bg-secondary text-secondary-foreground border-t">
+		<footer className="border-t bg-secondary text-secondary-foreground">
 			<div className="container mx-auto px-10 py-16">
 				<div className="grid grid-cols-12 gap-4">
 					<div className="col-span-12 max-w-md md:col-span-6">
-						<h2 className="mb-2 text-3xl font-extrabold">PACES</h2>
+						<h2 className="mb-2 font-extrabold text-3xl">PACES</h2>
 						<p className="text-muted-foreground">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
 							magni, natus quod libero cum minus illo, molestias omnis
@@ -51,7 +51,7 @@ export default function Footer() {
 						</p>
 					</div>
 					<div className="col-span-12 md:col-span-2">
-						<h2 className="mb-2 text-lg font-bold">Sitemap</h2>
+						<h2 className="mb-2 font-bold text-lg">Sitemap</h2>
 						<List>
 							{sitemap.map((item) => (
 								<List.Item key={item.name}>
@@ -61,7 +61,7 @@ export default function Footer() {
 						</List>
 					</div>
 					<div className="col-span-12 md:col-span-2">
-						<h2 className="mb-2 text-lg font-bold">External Links</h2>
+						<h2 className="mb-2 font-bold text-lg">External Links</h2>
 						<List>
 							<List.Item>
 								<Link
@@ -84,7 +84,7 @@ export default function Footer() {
 						</List>
 					</div>
 					<div className="col-span-12 md:col-span-2">
-						<h2 className="mb-2 text-lg font-bold">Resources</h2>
+						<h2 className="mb-2 font-bold text-lg">Resources</h2>
 						<List>
 							<List.Item>
 								<Link

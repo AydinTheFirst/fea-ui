@@ -15,7 +15,7 @@ export default function LandingNavbar() {
 			<Navbar.Container>
 				<Navbar.Content>
 					<Navbar.Toggle />
-					<Link className="text-3xl font-bold" to="/">
+					<Link className="font-bold text-3xl" to="/">
 						PACES
 					</Link>
 				</Navbar.Content>

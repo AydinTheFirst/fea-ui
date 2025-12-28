@@ -6,7 +6,7 @@ export default function Page() {
 			<div className="grid grid-cols-12 gap-4">
 				<div className="col-span-12">
 					<div className="flex flex-col items-center">
-						<h2 className="text-2xl font-semibold">About PACES</h2>
+						<h2 className="font-semibold text-2xl">About PACES</h2>
 						<Separator className="w-20 border-2" />
 						<p className="text-muted-foreground">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -16,7 +16,7 @@ export default function Page() {
 				<div className="col-span-12 my-4" />
 				<div className="col-span-12 md:col-span-6">
 					<div className="flex h-full flex-col justify-center">
-						<h4 className="mb-4 text-xl font-semibold">First Content</h4>
+						<h4 className="mb-4 font-semibold text-xl">First Content</h4>
 						<p className="text-lg">
 							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo
 							dignissimos doloribus, fugiat tempore quod consequatur rerum est
@@ -41,7 +41,7 @@ export default function Page() {
 				</div>
 				<div className="col-span-12 md:col-span-6">
 					<div className="flex h-full flex-col justify-center">
-						<h4 className="mb-4 text-xl font-semibold">Second Content</h4>
+						<h4 className="mb-4 font-semibold text-xl">Second Content</h4>
 						<p className="text-lg">
 							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis,
 							minima ratione. Corporis suscipit, aspernatur illum quidem,
@@ -52,7 +52,7 @@ export default function Page() {
 				</div>
 				<div className="col-span-12 md:col-span-6">
 					<div className="flex h-full flex-col justify-center">
-						<h4 className="mb-4 text-xl font-semibold">Third Content</h4>
+						<h4 className="mb-4 font-semibold text-xl">Third Content</h4>
 						<p className="text-lg">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
 							maiores, laboriosam magnam cumque corporis reiciendis consectetur.

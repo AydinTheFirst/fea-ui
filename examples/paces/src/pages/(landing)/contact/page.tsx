@@ -13,7 +13,7 @@ export default function Contact() {
 			<div className="grid grid-cols-12 gap-4">
 				<div className="col-span-12">
 					<div className="flex flex-col items-center">
-						<h2 className="text-2xl font-semibold">Contact With Us</h2>
+						<h2 className="font-semibold text-2xl">Contact With Us</h2>
 						<Separator className="w-20 border-2" />
 						<p className="text-muted-foreground">
 							For inquiries, please email us at contact@paces.com
@@ -24,7 +24,7 @@ export default function Contact() {
 				<div className="col-span-12 md:col-span-6">
 					<Card className="w-full max-w-none">
 						<Card.Header>
-							<Card.Title className="text-lg font-semibold">
+							<Card.Title className="font-semibold text-lg">
 								Contact Form
 							</Card.Title>
 							<Card.Description className="text-muted-foreground">

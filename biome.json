@@ -19,7 +19,7 @@
 	},
 	"files": {
 		"ignoreUnknown": true,
-		"includes": ["**", "!package.json", "!biome.json"]
+		"includes": ["**", "!package.json"]
 	},
 	"formatter": {
 		"enabled": true,
@@ -33,6 +33,12 @@
 	"linter": {
 		"enabled": true,
 		"rules": {
+			"nursery": {
+				"useSortedClasses": {
+					"fix": "safe",
+					"level": "on"
+				}
+			},
 			"recommended": true
 		}
 	},

@@ -8,8 +8,8 @@ export default function HelloWorld() {
 		<Container className="my-10">
 			<div className="grid grid-cols-1 md:grid-cols-2">
 				<div className="flex flex-col justify-center gap-4">
-					<h1 className="text-4xl font-bold">PACES</h1>
-					<p className="text-muted-foreground max-w-xl text-lg">
+					<h1 className="font-bold text-4xl">PACES</h1>
+					<p className="max-w-xl text-lg text-muted-foreground">
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est
 						dolorem sit ad aliquam! Iste, hic quibusdam debitis maiores ad quod
 						dolore et nostrum exercitationem error fugit voluptate earum fuga
@@ -26,7 +26,7 @@ export default function HelloWorld() {
 						</Button>
 					</div>
 					<Separator className="w-96" />
-					<Link className="text-lg font-medium" to="/about">
+					<Link className="font-medium text-lg" to="/about">
 						<h3>
 							10th PACES will be held on 00-00 Click here for more information.
 						</h3>
