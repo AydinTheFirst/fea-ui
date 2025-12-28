@@ -1,0 +1,54 @@
+.popover__trigger {
+	@apply transition-[scale] motion-reduce:transition-none;
+
+	&[data-popup-open] {
+		@apply scale-95;
+	}
+}
+
+.popover__positioner {
+	width: var(--positioner-width);
+	max-width: var(--available-width);
+	height: var(--positioner-width);
+}
+
+.popover__popup {
+	@apply box-border p-3 rounded;
+
+	@apply bg-popover text-popover-foreground shadow;
+
+	@apply transition-[transform,scale] motion-reduce:transition-none;
+
+	&[data-starting-style],
+	&[data-ending-style] {
+		@apply opacity-0 scale-90;
+	}
+}
+
+.popover__arrow {
+	@apply flex text-popover size-6;
+
+	&[data-side="top"] {
+		@apply -bottom-3 rotate-180;
+	}
+
+	&[data-side="right"] {
+		@apply -start-3 rotate-90;
+	}
+
+	&[data-side="bottom"] {
+		@apply -top-3;
+	}
+
+	&[data-side="left"] {
+		@apply -end-3 -rotate-90;
+	}
+}
+
+.popover__title {
+	@apply text-lg font-medium;
+}
+
+.popover__description {
+	@apply text-sm text-muted-foreground;
+}

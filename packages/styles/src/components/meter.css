@@ -18,7 +18,7 @@
 .meter__indicator {
 	@apply block rounded;
 
-	@apply transition-all motion-reduce:transition-none;
+	@apply transition-[width] motion-reduce:transition-none;
 }
 
 /** Variants */

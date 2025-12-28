@@ -3,7 +3,7 @@
 	@apply bg-input text-input-foreground rounded border;
 	@apply w-full px-3 py-2;
 
-	@apply transition-all motion-reduce:transition-none;
+	@apply transition-[brightness] motion-reduce:transition-none;
 
 	@media (hover: hover) {
 		&:hover:not([data-disabled]) {

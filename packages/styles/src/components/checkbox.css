@@ -4,7 +4,7 @@
 
 	@apply size-6 outline-none;
 
-	@apply transition-all motion-reduce:transition-none;
+	@apply transition-[visibility] motion-reduce:transition-none;
 
 	&[data-unchecked] {
 		@apply bg-input/50;

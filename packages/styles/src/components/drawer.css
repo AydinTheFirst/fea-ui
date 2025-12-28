@@ -14,7 +14,7 @@
 
 	@apply bg-card text-card-foreground shadow;
 
-	@apply transition-all motion-reduce:transition-none;
+	@apply transition-[translate] motion-reduce:transition-none;
 }
 
 .drawer__title {

@@ -4,7 +4,7 @@ import { cn } from "tailwind-variants";
 
 import { type ButtonVariants, buttonVariants } from "./button.variants";
 
-type ButtonProps = ButtonVariants & BaseButton.Props;
+export type ButtonProps = ButtonVariants & BaseButton.Props;
 
 const Button = ({
 	className,

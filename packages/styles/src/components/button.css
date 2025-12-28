@@ -6,12 +6,10 @@
 
 	@apply w-fit px-4 py-4;
 
-	@apply transition-all motion-reduce:transition-none;
+	@apply transition-[scale] motion-reduce:transition-none;
 
-	@media (hover: hover) {
-		&:hover:not([data-disabled]) {
-			@apply brightness-90;
-		}
+	&:hover:not([data-disabled]) {
+		@apply brightness-90;
 	}
 
 	&:active {
@@ -33,6 +31,10 @@
 
 .button--sm {
 	@apply h-8 text-sm;
+
+	svg {
+		@apply size-4;
+	}
 }
 
 .button--md {
@@ -60,7 +62,11 @@
 }
 
 .button--ghost {
-	@apply hover:bg-primary/10 border-0 bg-transparent;
+	@apply border-0 bg-transparent text-foreground;
+
+	&:hover:not([data-disabled]) {
+		@apply bg-secondary/10;
+	}
 }
 
 .button--icon-only {
