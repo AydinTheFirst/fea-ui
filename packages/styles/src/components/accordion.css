@@ -3,6 +3,8 @@
 }
 
 .accordion__trigger {
+	@apply cursor-pointer;
+
 	@apply flex w-full items-center justify-between border-b p-3;
 
 	@apply transition-colors motion-reduce:transition-none;
@@ -26,7 +28,7 @@
 	@apply transition-transform duration-300 motion-reduce:transition-none;
 
 	[data-panel-open] > & {
-		@apply bg-secondary rotate-180;
+		@apply rotate-180;
 	}
 }
 

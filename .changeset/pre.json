@@ -1,14 +1,15 @@
 {
-	"changesets": [
-		"flat-beers-laugh",
-		"flat-suits-learn",
-		"short-olives-pay",
-		"twenty-sheep-grin"
-	],
-	"initialVersions": {
-		"@fea-ui/react": "0.1.0",
-		"@fea-ui/styles": "0.1.0"
-	},
-	"mode": "pre",
-	"tag": "alpha"
+  "changesets": [
+    "flat-beers-laugh",
+    "flat-suits-learn",
+    "rare-berries-reply",
+    "short-olives-pay",
+    "twenty-sheep-grin"
+  ],
+  "initialVersions": {
+    "@fea-ui/react": "0.1.0",
+    "@fea-ui/styles": "0.1.0"
+  },
+  "mode": "pre",
+  "tag": "alpha"
 }

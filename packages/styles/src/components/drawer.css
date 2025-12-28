@@ -1,0 +1,84 @@
+.drawer__backdrop {
+	@apply fixed inset-0 bg-black/50 opacity-50;
+
+	@apply transition-opacity motion-reduce:transition-none;
+
+	&[data-starting-style],
+	&[data-ending-style] {
+		@apply opacity-0;
+	}
+}
+
+.drawer__popup {
+	@apply box-border fixed p-3;
+
+	@apply bg-card text-card-foreground shadow;
+
+	@apply transition-all motion-reduce:transition-none;
+}
+
+.drawer__title {
+	@apply text-lg font-medium;
+}
+
+.drawer__description {
+	@apply text-sm text-muted-foreground;
+}
+
+.drawer__close {
+	@apply cursor-pointer;
+
+	@apply absolute top-3 end-3 rounded-full p-1;
+
+	@apply text-muted-foreground;
+
+	@apply transition-colors motion-reduce:transition-none;
+
+	&:hover {
+		@apply bg-secondary/10;
+	}
+
+	&:focus {
+		@apply outline-none;
+	}
+}
+
+/**
+ * Variants
+ */
+
+.drawer--right.drawer__popup {
+	@apply end-0 top-0 w-96 max-w-[calc(100vw-2rem)] h-full rounded-l;
+
+	&[data-starting-style],
+	&[data-ending-style] {
+		@apply translate-x-full;
+	}
+}
+
+.drawer--left.drawer__popup {
+	@apply start-0 top-0 w-96 h-full rounded-r max-w-[calc(100vw-2rem)];
+
+	&[data-starting-style],
+	&[data-ending-style] {
+		@apply -translate-x-full;
+	}
+}
+
+.drawer--top.drawer__popup {
+	@apply top-0 start-0 w-full h-96 rounded-b;
+
+	&[data-starting-style],
+	&[data-ending-style] {
+		@apply -translate-y-full;
+	}
+}
+
+.drawer--bottom.drawer__popup {
+	@apply bottom-0 start-0 w-full h-96 rounded-t;
+
+	&[data-starting-style],
+	&[data-ending-style] {
+		@apply translate-y-full;
+	}
+}

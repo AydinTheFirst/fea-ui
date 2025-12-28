@@ -15,10 +15,6 @@
 		@apply status-disabled;
 	}
 
-	&:valid {
-		@apply status-valid;
-	}
-
 	&:invalid:not(:placeholder-shown) {
 		@apply status-invalid;
 	}
