@@ -1,5 +1,11 @@
 # @fea-ui/styles
 
+## 0.1.0-alpha.7
+
+### Patch Changes
+
+- add new components icon-button, popover
+
 ## 0.1.0-alpha.6
 
 ### Patch Changes
