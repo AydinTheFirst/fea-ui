@@ -10,6 +10,11 @@ export function baseOptions(): BaseLayoutProps {
       { text: "Docs", url: "/docs" },
       { text: "Components", url: "/docs/components/button" },
       { text: "Roadmap", url: "/roadmap" },
+      {
+        text: "Storybook",
+        url: "https://ui-sb.aydinthefirst.com/",
+        external: true,
+      },
     ],
   };
 }
