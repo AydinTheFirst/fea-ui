@@ -8,8 +8,11 @@ import { useProgress } from "./use-progress";
 // Root
 interface ProgressProps extends ProgressVariants, BaseProgress.Root.Props {}
 
-const Progress = ({ className, ...props }: ProgressProps) => {
-	const slots = useMemo(() => progressVariants(), []);
+const Progress = ({ className, variant, size, ...props }: ProgressProps) => {
+	const slots = useMemo(
+		() => progressVariants({ size, variant }),
+		[variant, size],
+	);
 
 	return (
 		<ProgressContext value={{ slots }}>
@@ -19,7 +22,9 @@ const Progress = ({ className, ...props }: ProgressProps) => {
 };
 
 // Label
-const ProgressLabel = ({ className, ...props }: BaseProgress.Label.Props) => {
+interface ProgressLabelProps extends BaseProgress.Label.Props {}
+
+const ProgressLabel = ({ className, ...props }: ProgressLabelProps) => {
 	const { slots } = useProgress();
 	return (
 		<BaseProgress.Label className={cn(className, slots.label())} {...props} />
@@ -27,7 +32,8 @@ const ProgressLabel = ({ className, ...props }: BaseProgress.Label.Props) => {
 };
 
 // Value
-const ProgressValue = ({ className, ...props }: BaseProgress.Value.Props) => {
+interface ProgressValueProps extends BaseProgress.Value.Props {}
+const ProgressValue = ({ className, ...props }: ProgressValueProps) => {
 	const { slots } = useProgress();
 	return (
 		<BaseProgress.Value className={cn(className, slots.value())} {...props} />
@@ -35,7 +41,8 @@ const ProgressValue = ({ className, ...props }: BaseProgress.Value.Props) => {
 };
 
 // Track
-const ProgressTrack = ({ className, ...props }: BaseProgress.Track.Props) => {
+interface ProgressTrackProps extends BaseProgress.Track.Props {}
+const ProgressTrack = ({ className, ...props }: ProgressTrackProps) => {
 	const { slots } = useProgress();
 	return (
 		<BaseProgress.Track className={cn(className, slots.track())} {...props} />
@@ -43,10 +50,8 @@ const ProgressTrack = ({ className, ...props }: BaseProgress.Track.Props) => {
 };
 
 // Indicator
-const ProgressIndicator = ({
-	className,
-	...props
-}: BaseProgress.Indicator.Props) => {
+interface ProgressIndicatorProps extends BaseProgress.Indicator.Props {}
+const ProgressIndicator = ({ className, ...props }: ProgressIndicatorProps) => {
 	const { slots } = useProgress();
 	return (
 		<BaseProgress.Indicator

@@ -37,7 +37,6 @@
     "postadd:component": "bun run gen:exports",
     "build": "tsdown",
     "check": "biome check --write .",
-    "dev": "tsdown --watch",
     "gen:exports": "bun scripts/generate-exports.mjs",
     "postgen:exports": "bun run check",
     "type-check": "tsc --noEmit"

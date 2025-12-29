@@ -24,17 +24,16 @@
   "author": "Halil Aydın <aydinhalil980@gmail.com>",
   "workspaces": [
     "apps/*",
-    "packages/*",
-    "examples/*"
+    "packages/*"
   ],
   "scripts": {
-    "build": "turbo build --filter=!examples/**",
-    "check": "turbo check",
-    "dev": "turbo dev --filter=!examples/**",
+    "build": "turbo run build",
+    "check": "turbo run check",
+    "dev": "turbo run dev",
     "prepare": "husky",
     "prepublish": "bun run build",
     "publish": "bun changeset --patch && bun changeset version && bun changeset publish",
-    "start": "turbo start --filter=!examples/**"
+    "start": "turbo run start"
   },
   "dependencies": {},
   "devDependencies": {

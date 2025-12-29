@@ -8,7 +8,7 @@
   { "name": "Checkbox Group", "status": "completed", "description": "" },
   { "name": "Collapsible", "status": "not_started", "description": "" },
   { "name": "Combobox", "status": "not_started", "description": "" },
-  { "name": "Context Menu", "status": "not_started", "description": "" },
+  { "name": "Context Menu", "status": "not_planned", "description": "" },
   { "name": "Dialog", "status": "completed", "description": "" },
   { "name": "Field", "status": "completed", "description": "" },
   { "name": "Fieldset", "status": "completed", "description": "" },
@@ -27,18 +27,26 @@
   { "name": "Navigation Menu", "status": "not_planned", "description": "" },
   { "name": "Number Field", "status": "not_started", "description": "" },
   { "name": "Popover", "status": "completed", "description": "" },
-  { "name": "Preview Card", "status": "not_started", "description": "" },
+  { "name": "Preview Card", "status": "not_planned", "description": "" },
   { "name": "Progress", "status": "completed", "description": "" },
-  { "name": "Radio", "status": "not_started", "description": "" },
-  { "name": "Scroll Area", "status": "not_started", "description": "" },
+  { "name": "Radio", "status": "completed", "description": "" },
+  { "name": "Scroll Area", "status": "not_planned", "description": "" },
   { "name": "Select", "status": "in_progress", "description": "" },
   { "name": "Separator", "status": "completed", "description": "" },
   { "name": "Slider", "status": "completed", "description": "" },
   { "name": "Switch", "status": "completed", "description": "" },
   { "name": "Tabs", "status": "completed", "description": "" },
-  { "name": "Toast", "status": "not_started", "description": "" },
-  { "name": "Toggle", "status": "not_started", "description": "" },
-  { "name": "Toggle Group", "status": "not_started", "description": "" },
-  { "name": "Toolbar", "status": "not_started", "description": "" },
+  { "name": "Toast", "status": "not_planned", "description": "use `sonner`" },
+  {
+    "name": "Toggle",
+    "status": "completed",
+    "description": "as ToggleButton"
+  },
+  {
+    "name": "Toggle Group",
+    "status": "not_planned",
+    "description": ""
+  },
+  { "name": "Toolbar", "status": "not_planned", "description": "" },
   { "name": "Tooltip", "status": "completed", "description": "" }
 ]

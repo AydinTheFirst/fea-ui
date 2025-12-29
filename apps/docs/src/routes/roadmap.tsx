@@ -1,9 +1,9 @@
 import { Container, Separator, Table } from "@fea-ui/react";
 import { HomeLayout } from "fumadocs-ui/layouts/home";
 import Footer from "@/components/footer";
+import components from "@/data/components.json";
+import customComponents from "@/data/custom-components.json";
 import { baseOptions } from "@/lib/layout.shared";
-import components from "./components.json";
-import customComponents from "./custom-components.json";
 
 export default function Roadmap() {
   const totalComponents = components.length;

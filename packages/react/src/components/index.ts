@@ -23,6 +23,8 @@ export * from "~/components/meter";
 export * from "~/components/navbar";
 export * from "~/components/popover";
 export * from "~/components/progress";
+export * from "~/components/radio";
+export * from "~/components/radio-group";
 export * from "~/components/separator";
 export * from "~/components/slider";
 export * from "~/components/switch";
