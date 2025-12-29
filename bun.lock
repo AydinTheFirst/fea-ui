@@ -47,7 +47,7 @@
     },
     "packages/react": {
       "name": "@fea-ui/react",
-      "version": "0.1.0-alpha.7",
+      "version": "0.1.0-alpha.8",
       "dependencies": {
         "@base-ui/react": "^1.0.0",
         "lucide-react": "^0.562.0",
@@ -99,7 +99,7 @@
     },
     "packages/styles": {
       "name": "@fea-ui/styles",
-      "version": "0.1.0-alpha.7",
+      "version": "0.1.0-alpha.8",
       "dependencies": {
         "tailwindcss": "^4.1.18",
       },

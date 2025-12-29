@@ -1,0 +1,48 @@
+.menu__positioner {
+	@apply outline-0;
+}
+
+.menu__popup {
+	@apply box-border p-3 rounded;
+
+	@apply bg-popover text-popover-foreground shadow;
+
+	@apply transition-[transform,scale] motion-reduce:transition-none;
+
+	&[data-starting-style],
+	&[data-ending-style] {
+		@apply opacity-0 scale-90;
+	}
+}
+
+.menu__arrow {
+	@apply flex text-popover size-6;
+
+	&[data-side="top"] {
+		@apply -bottom-3 rotate-180;
+	}
+
+	&[data-side="right"] {
+		@apply -start-3 rotate-90;
+	}
+
+	&[data-side="bottom"] {
+		@apply -top-3;
+	}
+
+	&[data-side="left"] {
+		@apply -end-3 -rotate-90;
+	}
+}
+
+.menu__item {
+	@apply select-none relative flex items-center px-3 py-2 rounded text-sm leading-none cursor-pointer;
+
+	&:focus {
+		@apply outline-none bg-secondary text-secondary-foreground;
+	}
+}
+
+.menu__separator {
+	@apply my-2 h-px bg-border;
+}

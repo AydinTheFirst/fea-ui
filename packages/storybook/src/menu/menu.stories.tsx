@@ -20,7 +20,6 @@ export const Default: Story = {
 				<Menu.Positioner sideOffset={8}>
 					<Menu.Popup>
 						<Menu.Arrow />
-						<Menu.Backdrop />
 						<Menu.Item>Item 1</Menu.Item>
 						<Menu.Item>Item 2</Menu.Item>
 						<Menu.Separator />
