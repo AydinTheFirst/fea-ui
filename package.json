@@ -32,7 +32,7 @@
     "dev": "turbo run dev",
     "prepare": "husky",
     "prepublish": "bun run build",
-    "publish": "bun changeset --patch && bun changeset version && bun changeset publish",
+    "publish": "bun changeset && bun changeset version && bun changeset publish",
     "start": "turbo run start"
   },
   "dependencies": {},
