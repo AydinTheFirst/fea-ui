@@ -13,7 +13,7 @@
 }
 
 .popover__popup {
-	@apply box-border p-3 rounded;
+	@apply p-3 rounded;
 
 	@apply bg-popover text-popover-foreground shadow;
 
