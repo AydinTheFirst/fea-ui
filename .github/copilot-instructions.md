@@ -23,6 +23,8 @@ Types allowed:
 - Do NOT end the subject line with a period
 - Keep the subject under 72 characters
 - Write imperative, present tense ("add", not "added" or "adds")
+- Use package names or component names as scope when applicable
+- Separate multiple changes with a semicolon if needed
 
 ## Examples
 

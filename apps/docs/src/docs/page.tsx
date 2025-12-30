@@ -1,6 +1,7 @@
 import browserCollections from "fumadocs-mdx:collections/browser";
 import { Button } from "@fea-ui/react";
 import { useFumadocsLoader } from "fumadocs-core/source/client";
+import { Tab, Tabs } from "fumadocs-ui/components/tabs";
 import { DocsLayout } from "fumadocs-ui/layouts/docs";
 import {
   DocsBody,
@@ -12,7 +13,6 @@ import defaultMdxComponents from "fumadocs-ui/mdx";
 import { baseOptions } from "src/lib/layout.shared";
 import { source } from "src/lib/source";
 import type { Route } from "./+types/page";
-
 export async function loader({ params }: Route.LoaderArgs) {
   const slugs = params["*"].split("/").filter((v) => v.length > 0);
   const page = source.getPage(slugs);
@@ -33,7 +33,7 @@ const clientLoader = browserCollections.docs.createClientLoader({
         <DocsTitle>{frontmatter.title}</DocsTitle>
         <DocsDescription>{frontmatter.description}</DocsDescription>
         <DocsBody>
-          <Mdx components={{ ...defaultMdxComponents, Button }} />
+          <Mdx components={{ ...defaultMdxComponents, Button, Tabs, Tab }} />
         </DocsBody>
       </DocsPage>
     );

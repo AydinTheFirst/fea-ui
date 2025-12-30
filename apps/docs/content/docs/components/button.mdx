@@ -17,21 +17,41 @@ import { Button } from "@fea-ui/react";
 
 ## Variants
 
-```jsx
-<Button variant="primary">Primary Button</Button>
-<Button variant="secondary">Secondary Button</Button>
-<Button variant="tertiary">Tertiary Button</Button>
-<Button variant="danger">Danger Button</Button>
-```
+<Tabs items={["Preview", "Code"]}>
+  <Tab value="Preview">
+    <div className="flex items-center gap-2">
+      <Button variant="primary">Primary Button</Button>
+      <Button variant="secondary">Secondary Button</Button>
+      <Button variant="tertiary">Tertiary Button</Button>
+      <Button variant="danger">Danger Button</Button>
+      <Button disabled>Disabled Button</Button>
+    </div>
+  </Tab>
+  <Tab value="Code">
+    ```tsx
+    <Button variant="primary">Primary Button</Button>
+    <Button variant="secondary">Secondary Button</Button>
+    <Button variant="tertiary">Tertiary Button</Button>
+    <Button variant="danger">Danger Button</Button>
+    ```
+  </Tab>
+</Tabs>
 
 ## Sizes
 
-```jsx
-<Button size="sm">Small Button</Button>
-<Button size="md">Medium Button</Button>
-<Button size="lg">Large Button</Button>
-```
-
-<Button variant="primary" size="md">
-  Medium Primary Button
-</Button>
+<Tabs items={["Preview", "Code"]}>
+  <Tab value="Preview">
+    <div className="flex items-end gap-4">
+      <Button size="sm">Small Button</Button>
+      <Button size="md">Medium Button</Button>
+      <Button size="lg">Large Button</Button>
+    </div>
+  </Tab>
+  <Tab value="Code">
+    ```tsx
+    <Button size="sm">Small Button</Button>
+    <Button size="md">Medium Button</Button>
+    <Button size="lg">Large Button</Button>
+    ```
+  </Tab>
+</Tabs>
