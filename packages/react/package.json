@@ -35,7 +35,7 @@
   "scripts": {
     "add:component": "bun scripts/add-component.mjs",
     "postadd:component": "bun run gen:exports",
-    "build": "tsdown",
+    "build": "bun run type-check && tsdown",
     "check": "biome check --write .",
     "gen:exports": "bun scripts/generate-exports.mjs",
     "postgen:exports": "bun run check",

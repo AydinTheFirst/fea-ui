@@ -1,12 +1,13 @@
 import { cn } from "tailwind-variants";
-import { Button, type ButtonProps } from "../button";
+import { Button } from "../button";
 import {
 	type IconButtonVariants,
 	iconButtonVariants,
 } from "./icon-button.variants";
 
 // Root
-export type IconButtonProps = IconButtonVariants & ButtonProps;
+export type IconButtonProps = IconButtonVariants &
+	React.ComponentProps<typeof Button>;
 
 const IconButton = ({
 	className,

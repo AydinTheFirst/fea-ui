@@ -85,7 +85,3 @@ export default Object.assign(Input, {
 	Label: InputLabel,
 	Root: Input,
 });
-
-export namespace Input {
-	export type Props = InputProps;
-}
