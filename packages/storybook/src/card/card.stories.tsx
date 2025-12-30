@@ -1,4 +1,4 @@
-import { Button, Card, cardVariants, Field, Form } from "@fea-ui/react";
+import { Button, Card, cardVariants, Form, Input } from "@fea-ui/react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Card> = {
@@ -27,17 +27,15 @@ export const Default: Story = {
 			</Card.Header>
 			<Card.Body>
 				<Form>
-					<Field>
-						<Field.Label>Username</Field.Label>
-						<Field.Control required />
-						<Field.Error />
-					</Field>
+					<Input>
+						<Input.Label>Username</Input.Label>
+						<Input.Control required />
+					</Input>
 
-					<Field>
-						<Field.Label>Password</Field.Label>
-						<Field.Control required type="password" />
-						<Field.Error />
-					</Field>
+					<Input>
+						<Input.Label>Password</Input.Label>
+						<Input.Control required type="password" />
+					</Input>
 
 					<Button className="w-full" type="submit">
 						Submit
