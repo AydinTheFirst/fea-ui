@@ -191,21 +191,21 @@ const MenuSubmenuTrigger = ({
 	);
 };
 
-Menu.Arrow = MenuArrow;
-Menu.Backdrop = MenuBackdrop;
-Menu.CheckboxItem = MenuCheckboxItem;
-Menu.Group = MenuGroup;
-Menu.GroupLabel = MenuGroupLabel;
-Menu.Item = MenuItem;
-Menu.Popup = MenuPopup;
-Menu.Portal = MenuPortal;
-Menu.Positioner = MenuPositioner;
-Menu.RadioGroup = MenuRadioGroup;
-Menu.RadioItem = MenuRadioItem;
-Menu.Root = Menu;
-Menu.Separator = MenuSeparator;
-Menu.Submenu = MenuSubmenu;
-Menu.SubmenuTrigger = MenuSubmenuTrigger;
-Menu.Trigger = MenuTrigger;
-
-export default Menu;
+export default Object.assign(Menu, {
+	Arrow: MenuArrow,
+	Backdrop: MenuBackdrop,
+	CheckboxItem: MenuCheckboxItem,
+	Group: MenuGroup,
+	GroupLabel: MenuGroupLabel,
+	Item: MenuItem,
+	Popup: MenuPopup,
+	Portal: MenuPortal,
+	Positioner: MenuPositioner,
+	RadioGroup: MenuRadioGroup,
+	RadioItem: MenuRadioItem,
+	Root: Menu,
+	Separator: MenuSeparator,
+	Submenu: MenuSubmenu,
+	SubmenuTrigger: MenuSubmenuTrigger,
+	Trigger: MenuTrigger,
+});

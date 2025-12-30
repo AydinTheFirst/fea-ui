@@ -144,16 +144,16 @@ const PopoverClose = ({ className, ...props }: PopoverCloseProps) => {
 	);
 };
 
-Popover.Root = Popover;
-Popover.Trigger = PopoverTrigger;
-Popover.Portal = PopoverPortal;
-Popover.Backdrop = PopoverBackdrop;
-Popover.Positioner = PopoverPositioner;
-Popover.Popup = PopoverPopup;
-Popover.Arrow = PopoverArrow;
-Popover.Viewport = PopoverViewport;
-Popover.Title = PopoverTitle;
-Popover.Description = PopoverDescription;
-Popover.Close = PopoverClose;
-
-export default Popover;
+export default Object.assign(Popover, {
+	Arrow: PopoverArrow,
+	Backdrop: PopoverBackdrop,
+	Close: PopoverClose,
+	Description: PopoverDescription,
+	Popup: PopoverPopup,
+	Portal: PopoverPortal,
+	Positioner: PopoverPositioner,
+	Root: Popover,
+	Title: PopoverTitle,
+	Trigger: PopoverTrigger,
+	Viewport: PopoverViewport,
+});

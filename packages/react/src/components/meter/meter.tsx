@@ -66,10 +66,10 @@ const MeterIndicator = ({ className, ...props }: MeterIndicatorProps) => {
 	);
 };
 
-Meter.Indicator = MeterIndicator;
-Meter.Label = MeterLabel;
-Meter.Root = Meter;
-Meter.Track = MeterTrack;
-Meter.Value = MeterValue;
-
-export default Meter;
+export default Object.assign(Meter, {
+	Indicator: MeterIndicator,
+	Label: MeterLabel,
+	Root: Meter,
+	Track: MeterTrack,
+	Value: MeterValue,
+});

@@ -24,7 +24,7 @@ const ListItem = ({ className, ...props }: ListItemProps) => {
 	return <li className={cn(className, slots.item())} {...props} />;
 };
 
-List.Root = List;
-List.Item = ListItem;
-
-export default List;
+export default Object.assign(List, {
+	Item: ListItem,
+	Root: List,
+});

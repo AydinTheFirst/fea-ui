@@ -41,8 +41,8 @@ const AvatarFallback = ({ className, ...props }: AvatarFallbackProps) => {
 	);
 };
 
-Avatar.Fallback = AvatarFallback;
-Avatar.Image = AvatarImage;
-Avatar.Root = Avatar;
-
-export default Avatar;
+export default Object.assign(Avatar, {
+	Fallback: AvatarFallback,
+	Image: AvatarImage,
+	Root: Avatar,
+});

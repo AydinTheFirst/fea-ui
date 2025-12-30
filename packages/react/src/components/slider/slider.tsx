@@ -64,11 +64,11 @@ const SliderThumb = ({ className, ...props }: BaseSlider.Thumb.Props) => {
 };
 
 // Assign subcomponents
-Slider.Value = SliderValue;
-Slider.Control = SliderControl;
-Slider.Track = SliderTrack;
-Slider.Indicator = SliderIndicator;
-Slider.Thumb = SliderThumb;
-Slider.Root = Slider;
-
-export default Slider;
+export default Object.assign(Slider, {
+	Control: SliderControl,
+	Indicator: SliderIndicator,
+	Root: Slider,
+	Thumb: SliderThumb,
+	Track: SliderTrack,
+	Value: SliderValue,
+});

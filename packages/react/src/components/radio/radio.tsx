@@ -31,7 +31,7 @@ const RadioIndicator = ({ className, ...props }: RadioIndicatorProps) => {
 	);
 };
 
-Radio.Root = Radio;
-Radio.Indicator = RadioIndicator;
-
-export default Radio;
+export default Object.assign(Radio, {
+	Indicator: RadioIndicator,
+	Root: Radio,
+});

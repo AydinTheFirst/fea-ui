@@ -55,10 +55,10 @@ const TabsPanel = ({ className, ...props }: TabsPanelProps) => {
 	return <BaseTabs.Panel className={cn(slots.panel(), className)} {...props} />;
 };
 
-Tabs.List = TabsList;
-Tabs.Tab = TabsTab;
-Tabs.Indicator = TabsIndicator;
-Tabs.Panel = TabsPanel;
-Tabs.Root = Tabs;
-
-export default Tabs;
+export default Object.assign(Tabs, {
+	Indicator: TabsIndicator,
+	List: TabsList,
+	Panel: TabsPanel,
+	Root: Tabs,
+	Tab: TabsTab,
+});

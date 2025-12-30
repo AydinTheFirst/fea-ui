@@ -93,12 +93,12 @@ const AccordionContent = ({ className, ...props }: AccordionContentProps) => {
 };
 
 // Exports
-Accordion.Content = AccordionContent;
-Accordion.Header = AccordionHeader;
-Accordion.Item = AccordionItem;
-Accordion.Panel = AccordionPanel;
-Accordion.Root = Accordion;
-Accordion.Trigger = AccordionTrigger;
-Accordion.TriggerIcon = AccordionTriggerIcon;
-
-export default Accordion;
+export default Object.assign(Accordion, {
+	Content: AccordionContent,
+	Header: AccordionHeader,
+	Item: AccordionItem,
+	Panel: AccordionPanel,
+	Root: Accordion,
+	Trigger: AccordionTrigger,
+	TriggerIcon: AccordionTriggerIcon,
+});

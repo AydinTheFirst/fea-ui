@@ -1,5 +1,9 @@
 /** Base Styling */
 .input {
+	@apply flex flex-col gap-1;
+}
+
+.input__control {
 	@apply bg-input text-input-foreground rounded border;
 	@apply w-full px-3 py-2;
 
@@ -14,20 +18,28 @@
 	&:disabled {
 		@apply status-disabled;
 	}
-
-	&:invalid:not(:placeholder-shown) {
-		@apply status-invalid;
-	}
 }
 
-.input--sm {
+.input__label {
+	@apply font-medium text-foreground;
+}
+
+.input__description {
+	@apply text-muted-foreground text-sm;
+}
+
+.input__error-message {
+	@apply text-danger-foreground text-sm;
+}
+
+.input--sm .input__control {
 	@apply h-8 text-sm;
 }
 
-.input--md {
+.input--md .input__control {
 	@apply h-10;
 }
 
-.input--lg {
+.input--lg .input__control {
 	@apply h-12;
 }

@@ -145,14 +145,14 @@ const AlertDialogClose = ({
 };
 
 // Exports
-AlertDialog.Root = AlertDialog;
-AlertDialog.Trigger = AlertDialogTrigger;
-AlertDialog.Portal = AlertDialogPortal;
-AlertDialog.Backdrop = AlertDialogBackdrop;
-AlertDialog.Viewport = AlertDialogViewport;
-AlertDialog.Popup = AlertDialogPopup;
-AlertDialog.Title = AlertDialogTitle;
-AlertDialog.Description = AlertDialogDescription;
-AlertDialog.Close = AlertDialogClose;
-
-export default AlertDialog;
+export default Object.assign(AlertDialog, {
+	Backdrop: AlertDialogBackdrop,
+	Close: AlertDialogClose,
+	Description: AlertDialogDescription,
+	Popup: AlertDialogPopup,
+	Portal: AlertDialogPortal,
+	Root: AlertDialog,
+	Title: AlertDialogTitle,
+	Trigger: AlertDialogTrigger,
+	Viewport: AlertDialogViewport,
+});

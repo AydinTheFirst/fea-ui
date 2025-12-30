@@ -1,4 +1,4 @@
-import { Button, Checkbox, Field, Form } from "@fea-ui/react";
+import { Button, Checkbox, Form, Input, Label } from "@fea-ui/react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Form> = {
@@ -10,20 +10,29 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
 	render: () => (
-		<Form onSubmit={(e) => e.preventDefault()}>
-			<Field.Root>
-				<Field.Label>Username</Field.Label>
-				<Field.Control required />
-				<Field.Description>your username</Field.Description>
-				<Field.Error />
-			</Field.Root>
+		<Form className="w-full max-w-sm" onSubmit={(e) => e.preventDefault()}>
+			<Input.Root>
+				<Input.Label>Username</Input.Label>
+				<Input.Control placeholder="Enter your username" required />
+				<Input.Description>Your unique username to login.</Input.Description>
+			</Input.Root>
 
-			<Field.Root>
+			<Input.Root>
+				<Input.Label>Password</Input.Label>
+				<Input.Control
+					placeholder="Enter your password"
+					required
+					type="password"
+				/>
+				<Input.Description>Your secure password.</Input.Description>
+			</Input.Root>
+
+			<Label>
 				<Checkbox.Root>
 					<Checkbox.Indicator />
 				</Checkbox.Root>
-				<Field.Label>Password</Field.Label>
-			</Field.Root>
+				Remember me
+			</Label>
 
 			<Button className="w-full" type="submit">
 				Submit

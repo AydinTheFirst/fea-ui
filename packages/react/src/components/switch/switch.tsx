@@ -28,7 +28,7 @@ const SwitchThumb = ({ className, ...props }: BaseSwitch.Thumb.Props) => {
 	);
 };
 
-Switch.Thumb = SwitchThumb;
-Switch.Root = Switch;
-
-export default Switch;
+export default Object.assign(Switch, {
+	Root: Switch,
+	Thumb: SwitchThumb,
+});

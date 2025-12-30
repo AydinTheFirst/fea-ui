@@ -156,16 +156,16 @@ const SelectSeparator = ({ className, ...props }: SelectSeparatorProps) => {
 	);
 };
 
-Select.Trigger = SelectTrigger;
-Select.Value = SelectValue;
-Select.Icon = SelectIcon;
-Select.Portal = SelectPortal;
-Select.Positioner = SelectPositioner;
-Select.Popup = SelectPopup;
-Select.List = SelectList;
-Select.Item = SelectItem;
-Select.ItemIndicator = SelectItemIndicator;
-Select.ItemText = SelectItemText;
-Select.Separator = SelectSeparator;
-
-export default Select;
+export default Object.assign(Select, {
+	Icon: SelectIcon,
+	Item: SelectItem,
+	ItemIndicator: SelectItemIndicator,
+	ItemText: SelectItemText,
+	List: SelectList,
+	Popup: SelectPopup,
+	Portal: SelectPortal,
+	Positioner: SelectPositioner,
+	Separator: SelectSeparator,
+	Trigger: SelectTrigger,
+	Value: SelectValue,
+});

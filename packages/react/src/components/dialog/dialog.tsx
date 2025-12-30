@@ -113,14 +113,14 @@ const DialogClose = ({ className, ...props }: DialogCloseProps) => {
 	);
 };
 
-Dialog.Backdrop = DialogBackdrop;
-Dialog.Close = DialogClose;
-Dialog.Description = DialogDescription;
-Dialog.Popup = DialogPopup;
-Dialog.Portal = DialogPortal;
-Dialog.Root = Dialog;
-Dialog.Title = DialogTitle;
-Dialog.Trigger = DialogTrigger;
-Dialog.Viewport = DialogViewport;
-
-export default Dialog;
+export default Object.assign(Dialog, {
+	Backdrop: DialogBackdrop,
+	Close: DialogClose,
+	Description: DialogDescription,
+	Popup: DialogPopup,
+	Portal: DialogPortal,
+	Root: Dialog,
+	Title: DialogTitle,
+	Trigger: DialogTrigger,
+	Viewport: DialogViewport,
+});

@@ -123,13 +123,13 @@ const NavbarMenuItem = ({ className, ...props }: NavbarMenuItemProps) => {
 	return <li className={cn(slots.menuItem(), className)} {...props} />;
 };
 
-Navbar.Root = Navbar;
-Navbar.Container = NavbarContainer;
-Navbar.Content = NavbarContent;
-Navbar.List = NavbarList;
-Navbar.ListItem = NavbarListItem;
-Navbar.Toggle = NavbarToggle;
-Navbar.Menu = NavbarMenu;
-Navbar.MenuItem = NavbarMenuItem;
-
-export default Navbar;
+export default Object.assign(Navbar, {
+	Container: NavbarContainer,
+	Content: NavbarContent,
+	List: NavbarList,
+	ListItem: NavbarListItem,
+	Menu: NavbarMenu,
+	MenuItem: NavbarMenuItem,
+	Root: Navbar,
+	Toggle: NavbarToggle,
+});

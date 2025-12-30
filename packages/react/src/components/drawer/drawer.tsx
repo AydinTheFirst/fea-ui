@@ -111,14 +111,14 @@ const DrawerClose = ({ className, children, ...props }: DrawerCloseProps) => {
 };
 
 // Assignments
-Drawer.Root = Drawer;
-Drawer.Trigger = DrawerTrigger;
-Drawer.Portal = DrawerPortal;
-Drawer.Backdrop = DrawerBackdrop;
-Drawer.Viewport = DrawerViewport;
-Drawer.Popup = DrawerPopup;
-Drawer.Title = DrawerTitle;
-Drawer.Description = DrawerDescription;
-Drawer.Close = DrawerClose;
-
-export default Drawer;
+export default Object.assign(Drawer, {
+	Backdrop: DrawerBackdrop,
+	Close: DrawerClose,
+	Description: DrawerDescription,
+	Popup: DrawerPopup,
+	Portal: DrawerPortal,
+	Root: Drawer,
+	Title: DrawerTitle,
+	Trigger: DrawerTrigger,
+	Viewport: DrawerViewport,
+});

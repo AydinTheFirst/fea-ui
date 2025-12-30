@@ -60,11 +60,11 @@ const CardDescription = ({ className, ...props }: CardDescriptionProps) => {
 };
 
 /** Exports */
-Card.Body = CardBody;
-Card.Description = CardDescription;
-Card.Footer = CardFooter;
-Card.Header = CardHeader;
-Card.Root = Card;
-Card.Title = CardTitle;
-
-export default Card;
+export default Object.assign(Card, {
+	Body: CardBody,
+	Description: CardDescription,
+	Footer: CardFooter,
+	Header: CardHeader,
+	Root: Card,
+	Title: CardTitle,
+});

@@ -69,12 +69,12 @@ export const TableFooter = ({ className, ...props }: TableFooterProps) => {
 };
 
 // Exports
-Table.Root = Table;
-Table.Head = TableHead;
-Table.Row = TableRow;
-Table.HeaderCell = TableHeaderCell;
-Table.Body = TableBody;
-Table.DataCell = TableDataCell;
-Table.Footer = TableFooter;
-
-export default Table;
+export default Object.assign(Table, {
+	Body: TableBody,
+	DataCell: TableDataCell,
+	Footer: TableFooter,
+	Head: TableHead,
+	HeaderCell: TableHeaderCell,
+	Root: Table,
+	Row: TableRow,
+});

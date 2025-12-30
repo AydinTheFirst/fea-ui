@@ -30,7 +30,7 @@ const FieldsetLegend = ({ className, ...props }: FieldsetLegendProps) => {
 };
 
 // Exports
-Fieldset.Root = Fieldset;
-Fieldset.Legend = FieldsetLegend;
-
-export default Fieldset;
+export default Object.assign(Fieldset, {
+	Legend: FieldsetLegend,
+	Root: Fieldset,
+});

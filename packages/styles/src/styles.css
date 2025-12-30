@@ -107,14 +107,6 @@
 	@apply cursor-wait opacity-75;
 }
 
-@utility status-valid {
-	@apply border-success;
-}
-
-@utility status-invalid {
-	@apply border-danger;
-}
-
 @layer base {
 	* {
 		@apply border-border outline-ring/50;

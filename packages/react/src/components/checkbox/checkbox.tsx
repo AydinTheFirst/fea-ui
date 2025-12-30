@@ -33,7 +33,7 @@ const CheckboxIndicator = ({ className, ...props }: CheckboxIndicatorProps) => {
 	);
 };
 
-Checkbox.Indicator = CheckboxIndicator;
-Checkbox.Root = Checkbox;
-
-export default Checkbox;
+export default Object.assign(Checkbox, {
+	Indicator: CheckboxIndicator,
+	Root: Checkbox,
+});

@@ -62,10 +62,10 @@ const ProgressIndicator = ({ className, ...props }: ProgressIndicatorProps) => {
 };
 
 // Exports
-Progress.Label = ProgressLabel;
-Progress.Value = ProgressValue;
-Progress.Track = ProgressTrack;
-Progress.Indicator = ProgressIndicator;
-Progress.Root = Progress;
-
-export default Progress;
+export default Object.assign(Progress, {
+	Indicator: ProgressIndicator,
+	Label: ProgressLabel,
+	Root: Progress,
+	Track: ProgressTrack,
+	Value: ProgressValue,
+});

@@ -10,7 +10,6 @@ export * from "~/components/chip";
 export * from "~/components/container";
 export * from "~/components/dialog";
 export * from "~/components/drawer";
-export * from "~/components/field";
 export * from "~/components/fieldset";
 export * from "~/components/form";
 export * from "~/components/icon-button";
