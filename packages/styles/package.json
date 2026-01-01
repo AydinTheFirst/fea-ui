@@ -35,7 +35,8 @@
   ],
   "scripts": {
     "build:css": "bunx @tailwindcss/cli -i src/styles.css -o dist/index.css --minify",
-    "check": "biome check --write"
+    "check": "biome check --write",
+    "gen:exports": "bun run scripts/gen-exports.mjs"
   },
   "dependencies": {
     "tailwindcss": "^4.1.18"

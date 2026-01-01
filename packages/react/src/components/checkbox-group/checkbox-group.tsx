@@ -1,4 +1,4 @@
-import { CheckboxGroup as BaseCheckboxGroup } from "@base-ui/react";
+import { CheckboxGroup as AriaCheckboxGroup } from "react-aria-components";
 
 import { cn } from "tailwind-variants";
 
@@ -9,11 +9,11 @@ import {
 
 interface CheckboxGroupProps
 	extends CheckboxGroupVariants,
-		BaseCheckboxGroup.Props {}
+		React.ComponentProps<typeof AriaCheckboxGroup> {}
 
 const CheckboxGroup = ({ className, ...props }: CheckboxGroupProps) => {
 	const styles = checkboxGroupVariants();
-	return <BaseCheckboxGroup className={cn(className, styles)} {...props} />;
+	return <AriaCheckboxGroup className={cn(className, styles)} {...props} />;
 };
 
 export default CheckboxGroup;

@@ -11,15 +11,9 @@ export const avatarVariants = tv({
 	},
 	variants: {
 		size: {
-			lg: {
-				root: "avatar--lg",
-			},
-			md: {
-				root: "avatar--md",
-			},
-			sm: {
-				root: "avatar--sm",
-			},
+			lg: { root: "avatar--lg" },
+			md: { root: "avatar--md" },
+			sm: { root: "avatar--sm" },
 		},
 	},
 });

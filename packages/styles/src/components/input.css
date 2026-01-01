@@ -1,18 +1,16 @@
-/** Base Styling */
-.input {
-	@apply flex flex-col gap-1;
-}
-
-.input__control {
+.input,
+.textarea {
 	@apply bg-input text-input-foreground rounded border;
 	@apply w-full px-3 py-2;
 
 	@apply transition-[brightness] motion-reduce:transition-none;
 
-	@media (hover: hover) {
-		&:hover:not([data-disabled]) {
-			@apply brightness-90;
-		}
+	&::placeholder {
+		@apply text-muted-foreground;
+	}
+
+	&[data-focused] {
+		@apply status-focused;
 	}
 
 	&:disabled {
@@ -20,26 +18,14 @@
 	}
 }
 
-.input__label {
-	@apply font-medium text-foreground;
-}
-
-.input__description {
-	@apply text-muted-foreground text-sm;
-}
-
-.input__error-message {
-	@apply text-danger-foreground text-sm;
-}
-
-.input--sm .input__control {
+.input--sm {
 	@apply h-8 text-sm;
 }
 
-.input--md .input__control {
+.input--md {
 	@apply h-10;
 }
 
-.input--lg .input__control {
+.input--lg {
 	@apply h-12;
 }

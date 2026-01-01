@@ -1,171 +1,77 @@
-import { Select as BaseSelect } from "@base-ui/react";
-import { LucideCheck, LucideChevronsUpDown } from "lucide-react";
-import { useMemo } from "react";
+import type React from "react";
+import { useId, useMemo } from "react";
 import { cn } from "tailwind-variants";
 import { SelectContext } from "./select.context";
 import { type SelectVariants, selectVariants } from "./select.variants";
 import { useSelect } from "./use-select";
 
 // Root
-interface SelectProps extends SelectVariants, BaseSelect.Root.Props<unknown> {}
+interface SelectProps extends SelectVariants, React.ComponentProps<"div"> {}
 
-const Select = ({ ...props }: SelectProps) => {
+const Select = ({ className, ...props }: SelectProps) => {
 	const slots = useMemo(() => selectVariants(), []);
 
+	const generatedId = useId();
+	const inputId = props.id || generatedId;
+
 	return (
-		<SelectContext.Provider value={{ slots }}>
-			<BaseSelect.Root {...props} />
+		<SelectContext.Provider value={{ id: inputId, slots }}>
+			<div className={cn(className, slots.root())} {...props} />
 		</SelectContext.Provider>
 	);
 };
 
-// Trigger
-interface SelectTriggerProps extends SelectVariants, BaseSelect.Trigger.Props {}
+// Label
+interface SelectLabelProps extends React.ComponentProps<"label"> {}
 
-const SelectTrigger = ({ className, ...props }: SelectTriggerProps) => {
-	const { slots } = useSelect();
+const SelectLabel = ({ className, ...props }: SelectLabelProps) => {
+	const { slots, id } = useSelect();
 
 	return (
-		<BaseSelect.Trigger className={cn(slots.trigger(), className)} {...props} />
+		// biome-ignore lint/a11y/noLabelWithoutControl: <label is associated in Select component
+		<label className={cn(className, slots.label())} htmlFor={id} {...props} />
 	);
 };
 
-// Value
-interface SelectValueProps extends SelectVariants, BaseSelect.Value.Props {}
-
-const SelectValue = ({ className, ...props }: SelectValueProps) => {
-	const { slots } = useSelect();
+// Control
+interface SelectControlProps extends React.ComponentProps<"select"> {}
+const SelectControl = ({ className, ...props }: SelectControlProps) => {
+	const { slots, id } = useSelect();
 
 	return (
-		<BaseSelect.Value className={cn(slots.value(), className)} {...props} />
+		<select className={cn(className, slots.control())} id={id} {...props} />
 	);
 };
 
-// Icon
-interface SelectIconProps extends SelectVariants, BaseSelect.Icon.Props {}
-
-const SelectIcon = ({ className, children, ...props }: SelectIconProps) => {
+// Option
+interface SelectOptionProps extends React.ComponentProps<"option"> {}
+const SelectOption = ({ className, ...props }: SelectOptionProps) => {
 	const { slots } = useSelect();
 
-	return (
-		<BaseSelect.Icon className={cn(slots.icon(), className)} {...props}>
-			{children ?? <LucideChevronsUpDown />}
-		</BaseSelect.Icon>
-	);
+	return <option className={cn(className, slots.option())} {...props} />;
 };
 
-// Portal
-interface SelectPortalProps extends SelectVariants, BaseSelect.Portal.Props {}
-
-const SelectPortal = ({ className, ...props }: SelectPortalProps) => {
+// Description
+interface SelectDescriptionProps extends React.ComponentProps<"p"> {}
+const SelectDescription = ({ className, ...props }: SelectDescriptionProps) => {
 	const { slots } = useSelect();
-	return (
-		<BaseSelect.Portal className={cn(slots.portal(), className)} {...props} />
-	);
+
+	return <p className={cn(className, slots.description())} {...props} />;
 };
 
-// Positioner
-interface SelectPositionerProps
-	extends SelectVariants,
-		BaseSelect.Positioner.Props {}
-
-const SelectPositioner = ({ className, ...props }: SelectPositionerProps) => {
+// Error
+interface SelectErrorProps extends React.ComponentProps<"p"> {}
+const SelectError = ({ className, ...props }: SelectErrorProps) => {
 	const { slots } = useSelect();
-	return (
-		<BaseSelect.Positioner
-			className={cn(slots.positioner(), className)}
-			{...props}
-		/>
-	);
-};
 
-// Popup
-interface SelectPopupProps extends SelectVariants, BaseSelect.Popup.Props {}
-
-const SelectPopup = ({ className, ...props }: SelectPopupProps) => {
-	const { slots } = useSelect();
-	return (
-		<BaseSelect.Popup className={cn(slots.popup(), className)} {...props} />
-	);
-};
-
-// List
-interface SelectListProps extends SelectVariants, BaseSelect.List.Props {}
-
-const SelectList = ({ className, ...props }: SelectListProps) => {
-	const { slots } = useSelect();
-	return <BaseSelect.List className={cn(slots.list(), className)} {...props} />;
-};
-
-// Item
-interface SelectItemProps extends SelectVariants, BaseSelect.Item.Props {}
-
-const SelectItem = ({ className, ...props }: SelectItemProps) => {
-	const { slots } = useSelect();
-	return <BaseSelect.Item className={cn(slots.item(), className)} {...props} />;
-};
-
-// Item Indicator
-interface SelectItemIndicatorProps
-	extends SelectVariants,
-		BaseSelect.ItemIndicator.Props {}
-
-const SelectItemIndicator = ({
-	className,
-	children,
-	...props
-}: SelectItemIndicatorProps) => {
-	const { slots } = useSelect();
-	return (
-		<BaseSelect.ItemIndicator
-			className={cn(slots.itemIndicator(), className)}
-			{...props}
-		>
-			{children ?? <LucideCheck />}
-		</BaseSelect.ItemIndicator>
-	);
-};
-
-// Item Text
-interface SelectItemTextProps
-	extends SelectVariants,
-		BaseSelect.ItemText.Props {}
-
-const SelectItemText = ({ className, ...props }: SelectItemTextProps) => {
-	const { slots } = useSelect();
-	return (
-		<BaseSelect.ItemText
-			className={cn(slots.itemText(), className)}
-			{...props}
-		/>
-	);
-};
-
-// Separator
-interface SelectSeparatorProps
-	extends SelectVariants,
-		BaseSelect.Separator.Props {}
-
-const SelectSeparator = ({ className, ...props }: SelectSeparatorProps) => {
-	const { slots } = useSelect();
-	return (
-		<BaseSelect.Separator
-			className={cn(slots.separator(), className)}
-			{...props}
-		/>
-	);
+	return <p className={cn(className, slots.error())} {...props} />;
 };
 
 export default Object.assign(Select, {
-	Icon: SelectIcon,
-	Item: SelectItem,
-	ItemIndicator: SelectItemIndicator,
-	ItemText: SelectItemText,
-	List: SelectList,
-	Popup: SelectPopup,
-	Portal: SelectPortal,
-	Positioner: SelectPositioner,
-	Separator: SelectSeparator,
-	Trigger: SelectTrigger,
-	Value: SelectValue,
+	Control: SelectControl,
+	Description: SelectDescription,
+	Error: SelectError,
+	Label: SelectLabel,
+	Option: SelectOption,
+	Root: Select,
 });

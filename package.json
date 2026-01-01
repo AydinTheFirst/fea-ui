@@ -33,7 +33,8 @@
     "prepare": "husky",
     "prepublish": "bun run build",
     "publish": "bun changeset && bun changeset version && bun changeset publish",
-    "start": "turbo run start"
+    "start": "turbo run start",
+    "type-check": "turbo run type-check"
   },
   "dependencies": {},
   "devDependencies": {

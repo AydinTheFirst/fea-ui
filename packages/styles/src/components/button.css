@@ -8,20 +8,24 @@
 
 	@apply transition-[scale] motion-reduce:transition-none;
 
-	&:hover:not([data-disabled]) {
+	&[data-hovered] {
 		@apply brightness-90;
+	}
+
+	&[data-focused] {
+		@apply status-focused;
 	}
 
 	&:active {
 		@apply scale-95;
 	}
 
-	&:focus-visible {
-		@apply status-focused;
-	}
-
 	&[data-disabled] {
 		@apply status-disabled;
+	}
+
+	&[data-pending] {
+		@apply status-pending;
 	}
 
 	svg {

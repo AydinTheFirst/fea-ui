@@ -1,10 +1,12 @@
-import { Button as BaseButton } from "@base-ui/react";
+import { Button as AriaButton } from "react-aria-components";
 
 import { cn } from "tailwind-variants";
 
 import { type ButtonVariants, buttonVariants } from "./button.variants";
 
-export type ButtonProps = ButtonVariants & BaseButton.Props;
+interface ButtonProps
+	extends ButtonVariants,
+		React.ComponentProps<typeof AriaButton> {}
 
 const Button = ({
 	className,
@@ -15,7 +17,7 @@ const Button = ({
 }: ButtonProps) => {
 	const styles = buttonVariants({ isIconOnly, size, variant });
 
-	return <BaseButton className={cn(styles, className)} {...props} />;
+	return <AriaButton className={cn(styles, className)} {...props} />;
 };
 
 export default Button;

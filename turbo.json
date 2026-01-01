@@ -8,9 +8,6 @@
 		"check": {
 			"cache": false
 		},
-		"check-types": {
-			"dependsOn": ["^check-types"]
-		},
 		"dev": {
 			"cache": false,
 			"persistent": true
@@ -19,6 +16,9 @@
 			"cache": false,
 			"dependsOn": ["^start"],
 			"persistent": true
+		},
+		"type-check": {
+			"dependsOn": ["^type-check"]
 		}
 	}
 }

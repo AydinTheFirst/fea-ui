@@ -10,7 +10,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const fonts = [
-	{ label: "Select a font", value: null },
+	{ label: "Select a font", value: "" },
 	{ label: "Arial", value: "arial" },
 	{ label: "Verdana", value: "verdana" },
 	{ label: "Helvetica", value: "helvetica" },
@@ -19,26 +19,18 @@ const fonts = [
 export const Default: Story = {
 	render: (args) => (
 		<div className="w-full max-w-xs">
-			<Select {...args} items={fonts}>
-				<Select.Trigger>
-					<Select.Value />
-					<Select.Icon />
-				</Select.Trigger>
-				<Select.Portal>
-					<Select.Positioner sideOffset={8}>
-						<Select.Popup>
-							<Select.List>
-								{fonts.map((font) => (
-									<Select.Item key={font.value} value={font.value}>
-										<Select.ItemText>{font.label}</Select.ItemText>
-										<Select.ItemIndicator />
-									</Select.Item>
-								))}
-							</Select.List>
-						</Select.Popup>
-					</Select.Positioner>
-				</Select.Portal>
-			</Select>
+			<Select.Root {...args}>
+				<Select.Label>Choose your favorite font</Select.Label>
+				<Select.Control>
+					{fonts.map((font) => (
+						<Select.Option key={font.value} {...font} />
+					))}
+				</Select.Control>
+				<Select.Description>
+					Select the font that will be used in the editor.
+				</Select.Description>
+				<Select.Error>Please select a font to proceed.</Select.Error>
+			</Select.Root>
 		</div>
 	),
 };
