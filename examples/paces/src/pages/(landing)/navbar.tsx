@@ -1,4 +1,6 @@
 import { Navbar } from "@fea-ui/react";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router";
 import Link from "~/components/link";
 import LocaleSwitcher from "~/components/locale-switcher";
 import ThemeSwitcher from "~/components/theme-switcher";
@@ -12,8 +14,18 @@ const items = [
 ];
 
 export default function LandingNavbar() {
+	const [isOpen, setIsOpen] = useState(false);
+
+	const { pathname } = useLocation();
+
+	// Close the navbar menu on route change
+	useEffect(() => {
+		console.log("Pathname changed, closing navbar menu", pathname);
+		setIsOpen(false);
+	}, [pathname]);
+
 	return (
-		<Navbar>
+		<Navbar isOpen={isOpen} onOpenChange={setIsOpen}>
 			<Navbar.Container>
 				<Navbar.Content>
 					<Navbar.Toggle />
