@@ -1,5 +1,5 @@
 .accordion {
-	@apply bg-card text-card-foreground flex w-full max-w-md flex-col justify-center;
+	@apply bg-surface text-surface-foreground flex w-full max-w-md flex-col justify-center;
 }
 
 .accordion__trigger {

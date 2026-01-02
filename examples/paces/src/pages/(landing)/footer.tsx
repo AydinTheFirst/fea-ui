@@ -1,4 +1,4 @@
-import { List, Separator } from "@fea-ui/react";
+import { Container, List, Separator } from "@fea-ui/react";
 import { Icon } from "@iconify/react";
 import Link from "~/components/link";
 
@@ -38,8 +38,8 @@ const sitemap = [
 
 export default function Footer() {
 	return (
-		<footer className="border-t bg-secondary text-secondary-foreground">
-			<div className="container mx-auto px-10 py-16">
+		<footer className="border-t bg-surface text-surface-foreground">
+			<Container className="py-16">
 				<div className="grid grid-cols-12 gap-4">
 					<div className="col-span-12 max-w-md md:col-span-6">
 						<h2 className="mb-2 font-extrabold text-3xl">PACES</h2>
@@ -127,7 +127,7 @@ export default function Footer() {
 						</div>
 					</div>
 				</div>
-			</div>
+			</Container>
 		</footer>
 	);
 }

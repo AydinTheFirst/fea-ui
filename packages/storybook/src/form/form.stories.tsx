@@ -20,14 +20,14 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
 	render: () => (
 		<Form className="w-full max-w-sm" onSubmit={(e) => e.preventDefault()}>
-			<TextField>
+			<TextField isRequired>
 				<Label>Username</Label>
 				<Input />
 				<Description>Your unique username to login.</Description>
 				<FieldError />
 			</TextField>
 
-			<TextField>
+			<TextField isRequired>
 				<Label>Password</Label>
 				<Input type="password" />
 				<Description>Must be at least 8 characters long.</Description>

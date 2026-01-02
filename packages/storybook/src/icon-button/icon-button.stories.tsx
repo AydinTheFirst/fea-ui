@@ -3,9 +3,6 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { LucideThumbsUp } from "lucide-react";
 
 const meta: Meta<typeof IconButton> = {
-	args: {
-		children: <LucideThumbsUp />,
-	},
 	argTypes: {
 		size: {
 			control: { type: "radio" },
@@ -24,5 +21,9 @@ export default meta;
 type Story = StoryObj<typeof IconButton>;
 
 export const Default: Story = {
-	render: (args) => <IconButton {...args} />,
+	render: (args) => (
+		<IconButton {...args}>
+			<LucideThumbsUp />
+		</IconButton>
+	),
 };

@@ -1,18 +1,24 @@
 @import "tailwindcss";
 @import "@fea-ui/styles";
+@plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:is(.dark *));
 
 :root {
-	--radius: 0.35rem;
+	--radius: 1rem;
+	--primary: oklch(0.6761 0.0992 195.06);
+	--primary-foreground: oklch(0.985 0 0);
 }
 
 @layer base {
+	html {
+		@apply scroll-smooth;
+	}
+
 	body {
-		font-family: "Inter", sans-serif;
+		font-family: "Poppins", sans-serif;
 	}
 }
-
 a {
 	svg {
 		@apply size-5;
@@ -20,5 +26,5 @@ a {
 }
 
 .container {
-	@apply mx-auto px-4;
+	@apply max-w-7xl;
 }

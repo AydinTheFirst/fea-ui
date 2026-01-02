@@ -1,4 +1,5 @@
 export * from "~/components/accordion";
+export * from "~/components/alert";
 export * from "~/components/alert-dialog";
 export * from "~/components/avatar";
 export * from "~/components/button";
@@ -21,6 +22,7 @@ export * from "~/components/list";
 export * from "~/components/menu";
 export * from "~/components/meter";
 export * from "~/components/navbar";
+export * from "~/components/overlay-trigger";
 export * from "~/components/popover";
 export * from "~/components/progress";
 export * from "~/components/radio";

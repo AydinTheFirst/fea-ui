@@ -2,3 +2,7 @@
 .label {
 	@apply font-medium text-foreground leading-none;
 }
+
+[data-required="true"] .label {
+	@apply after:content-['*'] after:ml-0.5 after:text-danger;
+}

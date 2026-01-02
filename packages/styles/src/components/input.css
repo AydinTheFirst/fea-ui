@@ -16,6 +16,10 @@
 	&:disabled {
 		@apply status-disabled;
 	}
+
+	&[data-invalid] {
+		@apply border-danger;
+	}
 }
 
 .input--sm {

@@ -1,6 +1,6 @@
 /** Base Styling */
 .table {
-	@apply w-full border-collapse bg-card;
+	@apply w-full border-collapse bg-surface text-surface-foreground;
 }
 
 .table__thead {

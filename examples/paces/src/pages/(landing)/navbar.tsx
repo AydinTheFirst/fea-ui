@@ -6,6 +6,8 @@ import ThemeSwitcher from "~/components/theme-switcher";
 const items = [
 	{ label: "Home", to: "/" },
 	{ label: "About", to: "/about" },
+	{ label: "CFP", to: "/cfp" },
+	{ label: "Committee", to: "/committee" },
 	{ label: "Contact", to: "/contact" },
 ];
 
@@ -15,11 +17,16 @@ export default function LandingNavbar() {
 			<Navbar.Container>
 				<Navbar.Content>
 					<Navbar.Toggle />
-					<Link className="font-bold text-3xl" to="/">
+					<Link className="font-bold" to="/">
+						<img
+							alt="PACES Logo"
+							className="mr-2 inline-block size-8"
+							src="/paces.jpg"
+						/>
 						PACES
 					</Link>
 				</Navbar.Content>
-				<Navbar.Content className="justify-center">
+				<Navbar.Content className="hidden justify-center md:flex">
 					<Navbar.List>
 						{items.map((item) => (
 							<Navbar.ListItem key={item.to}>
@@ -32,6 +39,13 @@ export default function LandingNavbar() {
 					<ThemeSwitcher />
 					<LocaleSwitcher />
 				</Navbar.Content>
+				<Navbar.Menu header="PACES">
+					{items.map((item) => (
+						<Navbar.MenuItem key={item.to}>
+							<Link to={item.to}>{item.label}</Link>
+						</Navbar.MenuItem>
+					))}
+				</Navbar.Menu>
 			</Navbar.Container>
 		</Navbar>
 	);

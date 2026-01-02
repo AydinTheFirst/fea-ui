@@ -10,9 +10,9 @@
 }
 
 .drawer__popup {
-	@apply fixed p-3;
+	@apply fixed p-3 z-50;
 
-	@apply bg-card text-card-foreground shadow;
+	@apply bg-surface text-surface-foreground shadow;
 
 	@apply transition-[translate] motion-reduce:transition-none;
 }

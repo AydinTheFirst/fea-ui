@@ -2,10 +2,15 @@ import {
 	Button,
 	Card,
 	Container,
-	Field,
+	Description,
+	FieldError,
+	Input,
+	Label,
 	Separator,
 	Textarea,
+	TextField,
 } from "@fea-ui/react";
+import images from "~/assets/images";
 
 export default function Contact() {
 	return (
@@ -34,27 +39,28 @@ export default function Contact() {
 						</Card.Header>
 						<Card.Body>
 							<form className="grid grid-cols-12 gap-4">
-								<Field className="col-span-12 md:col-span-6">
-									<Field.Label>Name</Field.Label>
-									<Field.Control placeholder="Your Name" required type="text" />
-									<Field.Error />
-								</Field>
-								<Field className="col-span-12 md:col-span-6">
-									<Field.Label>Email</Field.Label>
-									<Field.Control
-										placeholder="Your Email"
-										required
-										type="email"
-									/>
-									<Field.Error />
-								</Field>
-								<Field className="col-span-12">
-									<Field.Label>Message</Field.Label>
-									<Textarea placeholder="Your Message" required />
-									<Field.Error />
-								</Field>
+								<TextField className="col-span-12 md:col-span-6" isRequired>
+									<Label>Name</Label>
+									<Input type="text" />
+									<Description>Your full name.</Description>
+									<FieldError />
+								</TextField>
+								<TextField className="col-span-12 md:col-span-6" isRequired>
+									<Label>Email</Label>
+									<Input type="email" />
+									<Description>Your email address.</Description>
+									<FieldError />
+								</TextField>
+								<TextField className="col-span-12" isRequired>
+									<Label>Message</Label>
+									<Textarea rows={5} />
+									<Description>Your message to us.</Description>
+									<FieldError />
+								</TextField>
 								<div className="col-span-12">
-									<Button type="submit">Submit</Button>
+									<Button className="w-full" type="submit">
+										Submit
+									</Button>
 								</div>
 							</form>
 						</Card.Body>
@@ -65,7 +71,7 @@ export default function Contact() {
 						<img
 							alt="Contact Illustration"
 							className="w-full max-w-md rounded"
-							src="/contact-illustration.svg"
+							src={images.contact}
 						/>
 					</div>
 				</div>

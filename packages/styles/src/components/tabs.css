@@ -1,10 +1,10 @@
 /** Base Styling */
 .tabs {
-	@apply bg-card/50 text-secondary-foreground rounded border;
+	@apply bg-surface/50 text-secondary-foreground rounded border;
 }
 
 .tabs__list {
-	@apply bg-card relative z-0 flex gap-1 rounded-t border-b px-1;
+	@apply bg-surface relative z-0 flex gap-1 rounded-t border-b px-1;
 }
 
 .tabs__tab {
