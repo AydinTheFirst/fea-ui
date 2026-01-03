@@ -1,3 +1,4 @@
+import { Slot } from "@radix-ui/react-slot";
 import { LucideMenu, LucideX } from "lucide-react";
 import { useCallback, useMemo, useState } from "react";
 import { cn } from "tailwind-variants";
@@ -65,11 +66,11 @@ const NavbarList = ({ className, ...props }: NavbarListProps) => {
 	return <ul className={cn(slots.list(), className)} {...props} />;
 };
 
-interface NavbarListItemProps extends React.ComponentProps<"li"> {}
+interface NavbarListItemProps extends React.ComponentProps<typeof Slot> {}
 
 const NavbarListItem = ({ className, ...props }: NavbarListItemProps) => {
 	const { slots } = useNavbar();
-	return <li className={cn(slots.listItem(), className)} {...props} />;
+	return <Slot className={cn(slots.listItem(), className)} {...props} />;
 };
 
 interface NavbarToggleProps extends React.ComponentProps<"button"> {}
@@ -115,12 +116,12 @@ const NavbarMenu = ({ className, header, ...props }: NavbarMenuProps) => {
 	);
 };
 
-interface NavbarMenuItemProps extends React.ComponentProps<"li"> {}
+interface NavbarMenuItemProps extends React.ComponentProps<typeof Slot> {}
 
 const NavbarMenuItem = ({ className, ...props }: NavbarMenuItemProps) => {
 	const { slots } = useNavbar();
 
-	return <li className={cn(slots.menuItem(), className)} {...props} />;
+	return <Slot className={cn(slots.menuItem(), className)} {...props} />;
 };
 
 export default Object.assign(Navbar, {

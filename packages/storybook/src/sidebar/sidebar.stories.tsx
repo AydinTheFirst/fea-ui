@@ -1,4 +1,4 @@
-import { Sidebar } from "@fea-ui/react";
+import { Link, Sidebar } from "@fea-ui/react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Sidebar> = {
@@ -17,7 +17,20 @@ export const Default: Story = {
 					Sidebar Header
 					<Sidebar.Trigger className="md:hidden" />
 				</Sidebar.Header>
-				<Sidebar.Content>Sidebar Content</Sidebar.Content>
+				<Sidebar.Content>
+					<Sidebar.Menu>
+						<Sidebar.MenuLabel>Menu Label</Sidebar.MenuLabel>
+						<Sidebar.MenuItem>
+							<Link href="#">Menu Item 1</Link>
+						</Sidebar.MenuItem>
+						<Sidebar.MenuItem>
+							<Link href="#">Menu Item 2</Link>
+						</Sidebar.MenuItem>
+						<Sidebar.MenuItem>
+							<Link href="#">Menu Item 3</Link>
+						</Sidebar.MenuItem>
+					</Sidebar.Menu>
+				</Sidebar.Content>
 				<Sidebar.Footer>Sidebar Footer</Sidebar.Footer>
 			</Sidebar.Panel>
 			<Sidebar.Outlet>

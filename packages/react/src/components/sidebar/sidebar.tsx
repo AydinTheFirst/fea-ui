@@ -1,3 +1,4 @@
+import { Slot } from "@radix-ui/react-slot";
 import { LucidePanelLeftClose, LucidePanelLeftOpen } from "lucide-react";
 import React, { useMemo } from "react";
 import { cn } from "tailwind-variants";
@@ -99,10 +100,37 @@ const SidebarOutlet = ({ className, ...props }: SidebarOutletProps) => {
 	return <div className={cn(slots.outlet(), className)} {...props} />;
 };
 
+// Menu
+interface SidebarMenuProps extends React.ComponentProps<"nav"> {}
+const SidebarMenu = ({ className, ...props }: SidebarMenuProps) => {
+	const { slots } = useSidebar();
+
+	return <nav className={cn(slots.menu(), className)} {...props} />;
+};
+
+// Menu Item
+interface SidebarMenuItemProps extends React.ComponentProps<typeof Slot> {}
+const SidebarMenuItem = ({ className, ...props }: SidebarMenuItemProps) => {
+	const { slots } = useSidebar();
+
+	return <Slot className={cn(slots.menuItem(), className)} {...props} />;
+};
+
+// Menu Label
+interface SidebarMenuLabelProps extends React.ComponentProps<"div"> {}
+const SidebarMenuLabel = ({ className, ...props }: SidebarMenuLabelProps) => {
+	const { slots } = useSidebar();
+
+	return <div className={cn(slots.menuLabel(), className)} {...props} />;
+};
+
 export default Object.assign(Sidebar, {
 	Content: SidebarContent,
 	Footer: SidebarFooter,
 	Header: SidebarHeader,
+	Menu: SidebarMenu,
+	MenuItem: SidebarMenuItem,
+	MenuLabel: SidebarMenuLabel,
 	Outlet: SidebarOutlet,
 	Panel: SidebarPanel,
 	Root: Sidebar,
