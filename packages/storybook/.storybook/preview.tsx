@@ -12,13 +12,6 @@ const preview: Preview = {
 				light: "light",
 			},
 		}),
-		(Story) => {
-			return (
-				<div className="isolate flex min-h-screen items-center justify-center bg-background text-foreground">
-					<Story />
-				</div>
-			);
-		},
 	],
 };
 
