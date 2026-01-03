@@ -1,6 +1,6 @@
 {
   "name": "@fea-ui/react",
-  "version": "0.0.0-canary.2",
+  "version": "0.0.0-canary.3",
   "description": "FeaUI React - A lightweight, accessible React component library built on top of Base UI",
   "keywords": [
     "fea-ui",

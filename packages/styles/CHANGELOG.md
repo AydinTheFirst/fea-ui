@@ -1,5 +1,11 @@
 # @fea-ui/styles
 
+## 0.0.0-canary.3
+
+### Patch Changes
+
+- 8763e44: feat: add Spinner component with variants and styles
+
 ## 0.0.0-canary.2
 
 ### Patch Changes
