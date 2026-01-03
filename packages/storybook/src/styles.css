@@ -2,3 +2,7 @@
 @import "@fea-ui/styles";
 
 @custom-variant dark (&:is(.dark *));
+
+.center {
+	@apply flex items-center justify-center h-screen;
+}

@@ -1,4 +1,4 @@
-import { CheckboxGroup } from "@fea-ui/react";
+import { Checkbox, CheckboxGroup, Label } from "@fea-ui/react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof CheckboxGroup> = {
@@ -13,5 +13,20 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-	render: () => <CheckboxGroup></CheckboxGroup>,
+	render: () => (
+		<CheckboxGroup>
+			<Label>
+				<Checkbox.Root>
+					<Checkbox.Indicator />
+				</Checkbox.Root>
+				This is a checkbox-group text.
+			</Label>
+			<Label>
+				<Checkbox.Root defaultChecked>
+					<Checkbox.Indicator />
+				</Checkbox.Root>
+				This is a checked checkbox.
+			</Label>
+		</CheckboxGroup>
+	),
 };

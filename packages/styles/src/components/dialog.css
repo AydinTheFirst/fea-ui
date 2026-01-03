@@ -11,7 +11,7 @@
 }
 
 .dialog__popup {
-	@apply bg-popover rounded border p-6 shadow;
+	@apply bg-overlay text-overlay-foreground rounded border p-6 shadow;
 
 	@apply w-full max-w-lg;
 

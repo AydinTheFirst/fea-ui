@@ -6,9 +6,8 @@ import {
 } from "./icon-button.variants";
 
 // Root
-export interface IconButtonProps
-	extends IconButtonVariants,
-		React.ComponentProps<typeof Button> {}
+export type IconButtonProps = IconButtonVariants &
+	React.ComponentProps<typeof Button>;
 
 const IconButton = ({
 	className,

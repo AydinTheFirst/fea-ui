@@ -6,11 +6,7 @@
 
 	@apply w-fit px-4 py-4;
 
-	@apply transition-[scale] motion-reduce:transition-none;
-
-	&[data-hovered] {
-		@apply brightness-90;
-	}
+	@apply transition-[scale,background-color] motion-reduce:transition-none;
 
 	&[data-focused] {
 		@apply status-focused;
@@ -50,27 +46,23 @@
 }
 
 .button--primary {
-	@apply bg-primary text-primary-foreground;
+	@apply bg-primary text-primary-foreground hover-safe:bg-primary/90;
 }
 
 .button--secondary {
-	@apply bg-secondary text-secondary-foreground;
+	@apply bg-secondary text-secondary-foreground hover-safe:bg-secondary/90;
 }
 
 .button--outline {
-	@apply bg-background text-foreground;
+	@apply bg-background text-foreground hover-safe:bg-secondary/10;
 }
 
 .button--danger {
-	@apply bg-danger text-danger-foreground;
+	@apply bg-danger text-danger-foreground hover-safe:bg-danger/90;
 }
 
 .button--ghost {
-	@apply border-0 bg-transparent text-foreground;
-
-	&:hover:not([data-disabled]) {
-		@apply bg-secondary/10;
-	}
+	@apply border-0 bg-transparent text-foreground hover-safe:bg-secondary/10;
 }
 
 .button--icon-only {

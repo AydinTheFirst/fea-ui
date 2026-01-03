@@ -11,7 +11,7 @@
 }
 
 .alert-dialog__popup {
-	@apply bg-popover rounded border p-6 shadow;
+	@apply bg-overlay rounded border p-6 shadow text-overlay-foreground;
 
 	@apply w-full max-w-lg;
 

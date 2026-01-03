@@ -1,13 +1,4 @@
-import {
-	Button,
-	Description,
-	FieldError,
-	Form,
-	Input,
-	Label,
-	Textarea,
-	TextField,
-} from "@fea-ui/react";
+import { Button, Field, Form } from "@fea-ui/react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Form> = {
@@ -20,26 +11,23 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
 	render: () => (
 		<Form className="w-full max-w-sm" onSubmit={(e) => e.preventDefault()}>
-			<TextField isRequired>
-				<Label>Username</Label>
-				<Input />
-				<Description>Your unique username to login.</Description>
-				<FieldError />
-			</TextField>
+			<Field.Root required>
+				<Field.Label>Email</Field.Label>
+				<Field.Control placeholder="Enter your email" type="email" />
+				<Field.Description>
+					Please enter a valid email address.
+				</Field.Description>
+				<Field.Error />
+			</Field.Root>
 
-			<TextField isRequired>
-				<Label>Password</Label>
-				<Input type="password" />
-				<Description>Must be at least 8 characters long.</Description>
-				<FieldError />
-			</TextField>
-
-			<TextField>
-				<Label>About You</Label>
-				<Textarea rows={4} />
-				<Description>Tell us a bit about yourself.</Description>
-				<FieldError />
-			</TextField>
+			<Field.Root required>
+				<Field.Label>Password</Field.Label>
+				<Field.Control placeholder="Enter your password" type="password" />
+				<Field.Description>
+					Your password must be at least 8 characters long.
+				</Field.Description>
+				<Field.Error />
+			</Field.Root>
 
 			<Button className="w-full" type="submit">
 				Submit

@@ -2,10 +2,10 @@
 .switch {
 	@apply cursor-pointer;
 
-	@apply bg-secondary/50 relative flex cursor-pointer rounded-full border-2;
+	@apply bg-primary/10 relative flex cursor-pointer rounded-full border-2;
 
-	&:active {
-		@apply bg-secondary;
+	&[data-checked] {
+		@apply bg-primary/30;
 	}
 
 	&:focus-visible {

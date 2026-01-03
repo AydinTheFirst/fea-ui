@@ -39,15 +39,9 @@
 .sidebar__menu-item {
 	@apply cursor-pointer;
 	@apply flex items-center gap-3 rounded px-3 py-2;
-	@apply text-foreground;
+	@apply text-foreground hover-safe:bg-primary/10 hover-safe:text-primary;
 
 	@apply transition-[background-color,color] motion-reduce:transition-none;
-
-	@media (hover: hover) {
-		&:hover {
-			@apply bg-primary/10 text-primary;
-		}
-	}
 
 	&.active {
 		@apply bg-primary/20 text-primary;
@@ -76,15 +70,9 @@
 .sidebar__trigger {
 	@apply cursor-pointer;
 	@apply size-8 flex items-center justify-center;
-	@apply rounded border-border text-muted-foreground;
+	@apply rounded border-border text-muted-foreground hover-safe:text-foreground;
 
 	@apply transition-[color] motion-reduce:transition-none;
-
-	@media (hover: hover) {
-		&:hover {
-			@apply text-foreground;
-		}
-	}
 
 	:focus-visible {
 		@apply status-focused;

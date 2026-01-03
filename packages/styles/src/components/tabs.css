@@ -9,7 +9,7 @@
 
 .tabs__tab {
 	@apply m-0 flex appearance-none items-center justify-center border-0 bg-transparent outline-none;
-	@apply text-muted-foreground break-keep whitespace-nowrap select-none;
+	@apply text-muted-foreground break-keep whitespace-nowrap select-none hover-safe:text-foreground;
 	@apply h-8 px-2 py-0;
 
 	&[data-active] {

@@ -10,12 +10,10 @@
 
 	--surface: oklch(1 0 0);
 	--surface-foreground: oklch(0.145 0 0);
-	--popover: oklch(1 0 0);
-	--popover-foreground: oklch(0.145 0 0);
+	--overlay: oklch(1 0 0 / 90%);
+	--overlay-foreground: oklch(0.145 0 0);
 	--input: oklch(0.922 0 0);
 	--input-foreground: oklch(0.205 0 0);
-	--accordion: oklch(1 0 0);
-	--accordion-foreground: oklch(0.145 0 0);
 
 	--primary: oklch(0.205 0 0);
 	--primary-foreground: oklch(0.985 0 0);
@@ -43,12 +41,8 @@
 	--surface-foreground: oklch(0.985 0 0);
 	--overlay: oklch(0.205 0 0);
 	--overlay-foreground: oklch(0.985 0 0);
-	--popover: oklch(0.205 0 0);
-	--popover-foreground: oklch(0.985 0 0);
 	--input: oklch(1 0 0 / 15%);
 	--input-foreground: oklch(0.985 0 0);
-	--accordion: oklch(0.205 0 0);
-	--accordion-foreground: oklch(0.985 0 0);
 
 	--primary: oklch(0.922 0 0);
 	--primary-foreground: oklch(0.205 0 0);
@@ -76,12 +70,8 @@
 	--color-surface-foreground: var(--surface-foreground);
 	--color-overlay: var(--overlay);
 	--color-overlay-foreground: var(--overlay-foreground);
-	--color-popover: var(--popover);
-	--color-popover-foreground: var(--popover-foreground);
 	--color-input: var(--input);
 	--color-input-foreground: var(--input-foreground);
-	--color-accordion: var(--accordion);
-	--color-accordion-foreground: var(--accordion-foreground);
 
 	--color-primary: var(--primary);
 	--color-primary-foreground: var(--primary-foreground);
@@ -109,6 +99,19 @@
 
 @utility status-pending {
 	@apply cursor-wait opacity-75;
+}
+
+@custom-variant hover-safe {
+	@media (hover: hover) and (pointer: fine) {
+		&:hover {
+			@slot;
+		}
+
+		&:hover::before,
+		&:hover::after {
+			@slot;
+		}
+	}
 }
 
 @layer base {

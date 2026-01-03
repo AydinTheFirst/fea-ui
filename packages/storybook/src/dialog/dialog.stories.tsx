@@ -1,13 +1,4 @@
-import {
-	Button,
-	buttonVariants,
-	Description,
-	Dialog,
-	Form,
-	Input,
-	Label,
-	TextField,
-} from "@fea-ui/react";
+import { Button, buttonVariants, Dialog, Field, Form } from "@fea-ui/react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Dialog> = {
@@ -35,11 +26,14 @@ export const Default: Story = {
 					</Dialog.Description>
 
 					<Form className="my-4" onSubmit={(e) => e.preventDefault()}>
-						<TextField>
-							<Label>Email Address</Label>
-							<Input />
-							<Description>Please enter your email address.</Description>
-						</TextField>
+						<Field.Root required>
+							<Field.Label>Email</Field.Label>
+							<Field.Control placeholder="Enter your email" type="email" />
+							<Field.Description>
+								Please enter a valid email address.
+							</Field.Description>
+							<Field.Error />
+						</Field.Root>
 
 						<Button className="w-full" type="submit">
 							Submit
