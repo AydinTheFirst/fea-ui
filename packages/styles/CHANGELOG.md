@@ -1,5 +1,11 @@
 # @fea-ui/styles
 
+## 0.0.0-canary.2
+
+### Patch Changes
+
+- c0e339c: canary release 1
+
 ## 0.0.0-canary.1
 
 ### Major Changes
