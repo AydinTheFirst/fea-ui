@@ -15,6 +15,7 @@
     "@fea-ui/styles": "workspace:*",
     "@fontsource/poppins": "^5.2.7",
     "@iconify/react": "^6.0.2",
+    "@mdx-js/react": "^3.1.1",
     "@react-router/node": "7.11.0",
     "@react-router/serve": "7.11.0",
     "isbot": "^5.1.32",
@@ -32,6 +33,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.3.10",
+    "@mdx-js/rollup": "^3.1.1",
     "@react-router/dev": "7.11.0",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.1.18",

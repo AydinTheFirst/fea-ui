@@ -13,6 +13,7 @@ import defaultMdxComponents from "fumadocs-ui/mdx";
 import { baseOptions } from "src/lib/layout.shared";
 import { source } from "src/lib/source";
 import type { Route } from "./+types/page";
+
 export async function loader({ params }: Route.LoaderArgs) {
   const slugs = params["*"].split("/").filter((v) => v.length > 0);
   const page = source.getPage(slugs);
