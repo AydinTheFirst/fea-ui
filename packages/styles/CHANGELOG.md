@@ -1,5 +1,11 @@
 # @fea-ui/styles
 
+## 0.1.0-alpha.10
+
+### Patch Changes
+
+- 3093b27: feat: sidebar component
+
 ## 0.1.0-alpha.9
 
 ### Patch Changes
