@@ -1,4 +1,4 @@
-import { Button, Drawer, drawerVariants } from "@fea-ui/react";
+import { buttonVariants, Drawer, drawerVariants } from "@fea-ui/react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Drawer> = {
@@ -21,9 +21,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
 	render: (args) => (
 		<Drawer {...args}>
-			<Drawer.Trigger>
-				<Button>Open Drawer</Button>
-			</Drawer.Trigger>
+			<Drawer.Trigger className={buttonVariants()}>Open Drawer</Drawer.Trigger>
 			<Drawer.Portal>
 				<Drawer.Backdrop />
 				<Drawer.Viewport>

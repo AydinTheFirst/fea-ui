@@ -1,4 +1,4 @@
-import { AlertDialog, Button } from "@fea-ui/react";
+import { AlertDialog, buttonVariants } from "@fea-ui/react";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof AlertDialog> = {
@@ -12,8 +12,8 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
 	render: (args) => (
 		<AlertDialog.Root {...args}>
-			<AlertDialog.Trigger>
-				<Button variant="danger">Open Alert Dialog</Button>
+			<AlertDialog.Trigger className={buttonVariants({ variant: "danger" })}>
+				Open Alert Dialog
 			</AlertDialog.Trigger>
 			<AlertDialog.Portal>
 				<AlertDialog.Backdrop />
