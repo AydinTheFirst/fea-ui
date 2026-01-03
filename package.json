@@ -24,8 +24,7 @@
   "author": "Halil Aydın <aydinhalil980@gmail.com>",
   "workspaces": [
     "apps/*",
-    "packages/*",
-    "examples/*"
+    "packages/*"
   ],
   "scripts": {
     "build": "turbo run build",
