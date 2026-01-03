@@ -1,31 +1,19 @@
 # @fea-ui/react
 
-## 0.1.0-alpha.10
+## 0.0.0-canary.1
+
+### Major Changes
+
+- cc8c5bb: feat: drawer component
 
 ### Patch Changes
 
+- 47b87bd: feat: 2 new components
+- 43cadce: add new components icon-button, popover
 - 3093b27: feat: sidebar component
-
-## 0.1.0-alpha.9
-
-### Patch Changes
-
+- 46afd5c: feat: fieldset component with context and styles
+- 5b48961: feat: update package configurations for @fea-ui/react and @fea-ui/styles, remove old changeset, and adjust imports
 - 2bcf0a2: feat: alert icon, fix: styling of various components
-
-## 0.1.0-alpha.8
-
-### Patch Changes
-
-- feat: 2 new components
-
-## 0.1.0-alpha.7
-
-### Patch Changes
-
-- add new components icon-button, popover
-
-## 0.1.0-alpha.6
-
-### Patch Changes
-
-- feat: entegrate drawer component as menu of navbar for better styling
+- 5b48961: feat: new components
+- ee9aee9: feat: entegrate drawer component as menu of navbar for better styling
+- 5b48961: update readme for better explanation

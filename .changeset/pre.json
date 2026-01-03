@@ -12,9 +12,9 @@
     "twenty-sheep-grin"
   ],
   "initialVersions": {
-    "@fea-ui/react": "0.1.0",
-    "@fea-ui/styles": "0.1.0"
+    "@fea-ui/react": "0.0.0-canary.0",
+    "@fea-ui/styles": "0.0.0-canary.0"
   },
   "mode": "pre",
-  "tag": "alpha"
+  "tag": "canary"
 }

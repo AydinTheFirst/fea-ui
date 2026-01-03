@@ -1,6 +1,6 @@
 {
   "name": "@fea-ui/react",
-  "version": "0.1.0-alpha.10",
+  "version": "0.0.0-canary.1",
   "description": "FeaUI React - A lightweight, accessible React component library built on top of Base UI",
   "keywords": [
     "fea-ui",
@@ -35,17 +35,17 @@
   "scripts": {
     "add:component": "bun scripts/add-component.mjs",
     "postadd:component": "bun run gen:exports",
-    "build": "bun run type-check && tsdown",
+    "build": "tsdown",
     "check": "biome check --write .",
     "gen:exports": "bun scripts/generate-exports.mjs",
     "postgen:exports": "bun run check",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "dev": "tsdown --watch"
   },
   "dependencies": {
     "@base-ui/react": "^1.0.0",
     "@radix-ui/react-slot": "^1.2.4",
     "lucide-react": "^0.562.0",
-    "react-aria-components": "^1.14.0",
     "tailwind-merge": "^3.4.0",
     "tailwind-variants": "^3.2.2"
   },
